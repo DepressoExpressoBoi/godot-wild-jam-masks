@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://8x05u8pfs2ax"]
+
+[ext_resource type="Texture2D" uid="uid://bk3aw1ljkqk1f" path="res://assets/BackgroundImages/door.jpg" id="1_pxa8e"]
+[ext_resource type="Texture2D" uid="uid://lkpu4ukady7n" path="res://assets/RPSSprites/FruitRollUp/FruitRollUp.png" id="2_jqhtl"]
+[ext_resource type="Texture2D" uid="uid://c1awqk4tfjbs0" path="res://assets/RPSSprites/FruitRollUp/selected.png" id="3_0mspb"]
+[ext_resource type="Texture2D" uid="uid://cmv6y11cmw2ib" path="res://assets/RPSSprites/FruitRollUp/hovered.png" id="4_jnumi"]
+[ext_resource type="Texture2D" uid="uid://c4ogl27rj7ylx" path="res://assets/RPSSprites/FruitRollUp/disabled.png" id="5_7cw88"]
+
+[node name="Node" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pxa8e")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -101.0
+offset_top = 28.0
+offset_right = 539.0
+offset_bottom = 668.0
+size_flags_vertical = 8
+texture_normal = ExtResource("2_jqhtl")
+texture_pressed = ExtResource("3_0mspb")
+texture_hover = ExtResource("4_jnumi")
+texture_disabled = ExtResource("5_7cw88")
+stretch_mode = 3
