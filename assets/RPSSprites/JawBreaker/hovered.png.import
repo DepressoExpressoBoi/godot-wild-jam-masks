@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c464ale6g7ie0"
-path="res://.godot/imported/Scissors.png-a54934c89af53f3a63e378472246ea55.ctex"
+uid="uid://b3hd8bu7thi70"
+path="res://.godot/imported/hovered.png-8b0064d427a9df94699007f62998ade8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/RPSSprites/Scissors.png"
-dest_files=["res://.godot/imported/Scissors.png-a54934c89af53f3a63e378472246ea55.ctex"]
+source_file="res://assets/RPSSprites/JawBreaker/hovered.png"
+dest_files=["res://.godot/imported/hovered.png-8b0064d427a9df94699007f62998ade8.ctex"]
 
 [params]
 
