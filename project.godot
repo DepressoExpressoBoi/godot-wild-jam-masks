@@ -15,6 +15,12 @@ run/main_scene="uid://8x05u8pfs2ax"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+FruitRollUpCounter="*res://FruitRollUpCounter.gd"
+JawBreakerCounter="*res://JawBreakerCounter.gd"
+ScissorsCounter="*res://ScissorsCounter.gd"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
