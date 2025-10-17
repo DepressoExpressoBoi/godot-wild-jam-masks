@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://ppcmqjbug43q"]
+[gd_scene load_steps=9 format=3 uid="uid://ppcmqjbug43q"]
+
+[ext_resource type="Texture2D" uid="uid://bukxmalparqn7" path="res://assets/new_franenstein_org.png" id="1_i3yjg"]
+[ext_resource type="Texture2D" uid="uid://bu5tjgs1f4hxs" path="res://assets/pressed_franenstein.png" id="2_yiq8b"]
+[ext_resource type="Texture2D" uid="uid://blmgpxxj4vp6n" path="res://assets/hover_franenstein.png" id="3_choqs"]
+[ext_resource type="Texture2D" uid="uid://bao2ql8ekh0d0" path="res://assets/disable_franenstein.png" id="4_aeysp"]
+[ext_resource type="Texture2D" uid="uid://jeebggr8quhs" path="res://assets/jack_o_lantern_sticker.png" id="5_0wftm"]
+[ext_resource type="Texture2D" uid="uid://48vesx2e61yk" path="res://assets/pressed_jack_o_lantern.png" id="6_yf4ni"]
+[ext_resource type="Texture2D" uid="uid://eud7ny25dvyy" path="res://assets/hover_jack_o_lantern.png" id="7_7jxvn"]
+[ext_resource type="Texture2D" uid="uid://s1601e3ec31d" path="res://assets/disable_jack_o_lantern.png" id="8_w8i6w"]
 
 [node name="mask_demo_test" type="Node2D"]
+
+[node name="franenstein_Button" type="TextureButton" parent="."]
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 549.0
+offset_bottom = 604.0
+texture_normal = ExtResource("1_i3yjg")
+texture_pressed = ExtResource("2_yiq8b")
+texture_hover = ExtResource("3_choqs")
+texture_disabled = ExtResource("4_aeysp")
+
+[node name="sticker_Button" type="TextureButton" parent="."]
+offset_left = 598.0
+offset_top = 78.0
+offset_right = 780.0
+offset_bottom = 270.0
+texture_normal = ExtResource("5_0wftm")
+texture_pressed = ExtResource("6_yf4ni")
+texture_hover = ExtResource("7_7jxvn")
+texture_disabled = ExtResource("8_w8i6w")
