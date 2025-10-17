@@ -20,6 +20,7 @@ config/icon="res://assets/icon.svg"
 FruitRollUpCounter="*res://FruitRollUpCounter.gd"
 JawBreakerCounter="*res://JawBreakerCounter.gd"
 ScissorsCounter="*res://ScissorsCounter.gd"
+PlayRps="*res://PlayRPS.gd"
 
 [rendering]
 
