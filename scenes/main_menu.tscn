@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bb2jsrq85eag4"]
+[gd_scene load_steps=8 format=3 uid="uid://bb2jsrq85eag4"]
 
+[ext_resource type="Script" uid="uid://c3o4tg3c50vik" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://ctfukfall2x00" path="res://scenes/blank_menu_bkgrnd.png" id="1_l6cm7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekxnf"]
@@ -45,6 +46,7 @@ offset_right = -298.0
 offset_bottom = -261.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ekxnf")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -133,3 +135,7 @@ theme_override_font_sizes/font_size = 30
 text = "Mask_demo"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/start_Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/option_Button" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit_Button" to="." method="_on_exit_button_pressed"]
