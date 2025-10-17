@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const speed = 300
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var horizontal_dir = Input.get_axis("ui_left", "ui_right")
 	var vertical_dir = Input.get_axis("ui_up", "ui_down")
 	
@@ -17,3 +17,8 @@ func _physics_process(delta):
 		velocity.y = move_toward(velocity.y, 0, speed)
 
 	move_and_slide()
+	
+
+func _on_area_2d_body_entered(body: Node2D):
+	if body.is_in_group("houses"):
+		print("entering house")

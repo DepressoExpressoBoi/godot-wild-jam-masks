@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://e47yy2gsx3to"]
+
+[ext_resource type="Script" uid="uid://cs3akh2fljb0b" path="res://licorice_spawner.gd" id="1_i2ynb"]
+
+[node name="licorice_spawner" type="Node2D"]
+script = ExtResource("1_i2ynb")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

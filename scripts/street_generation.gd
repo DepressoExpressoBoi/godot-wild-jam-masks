@@ -19,17 +19,31 @@ var coord_indices = {
 	12: Vector2i(0, 3), 13: Vector2i(1, 3), 14: Vector2i(2, 3), 15: Vector2i(3, 3),
 }
 
+var house_coords = {
+	1: Vector2i(0, 0), 2: Vector2i(1, 0), 3: Vector2i(0, 1), 4: Vector2i(1, 1)
+}
+
 var width = 25
 var height = 25
 
 var erase_fraction = 0.1
 
 @onready var map = $"."
+@onready var house_map = $"../Houses"
 
 func _ready():
 	randomize()
 	make_maze()
 	erase_walls()
+	place_houses()
+
+	
+func place_houses():
+	for x in range(width):
+		for y in range(height):
+			if tile_indices[map.get_cell_atlas_coords(Vector2i(x, y))] == 15:
+				house_map.set_cell(Vector2i(x, y), 0, house_coords[randi_range(1, 4)])
+			
 	
 func erase_walls():
 	for i in range(int(width * height * erase_fraction)):
