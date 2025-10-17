@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b73k57xs4dsua"
-path="res://.godot/imported/caldron_halloween_sticker.png-0103245b9023bc030f11a51b6400dc94.ctex"
+uid="uid://dposj3jx41rg"
+path="res://.godot/imported/franenkstein_sticker_final.png-817fa3e586137ec3231107fccdff4fae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/caldron_halloween_sticker.png"
-dest_files=["res://.godot/imported/caldron_halloween_sticker.png-0103245b9023bc030f11a51b6400dc94.ctex"]
+source_file="res://assets/franenkstein_sticker_final.png"
+dest_files=["res://.godot/imported/franenkstein_sticker_final.png-817fa3e586137ec3231107fccdff4fae.ctex"]
 
 [params]
 

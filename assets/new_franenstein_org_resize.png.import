@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsim5jlrjt6y1"
-path="res://.godot/imported/caldron_org_sticker.png-4de416bde3a1e0a6287f6d696b0f8a7f.ctex"
+uid="uid://d1a4dxodprq"
+path="res://.godot/imported/new_franenstein_org_resize.png-f5fcf8806d3b2efb0e0ae27b865558de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/caldron_org_sticker.png"
-dest_files=["res://.godot/imported/caldron_org_sticker.png-4de416bde3a1e0a6287f6d696b0f8a7f.ctex"]
+source_file="res://assets/new_franenstein_org_resize.png"
+dest_files=["res://.godot/imported/new_franenstein_org_resize.png-f5fcf8806d3b2efb0e0ae27b865558de.ctex"]
 
 [params]
 
