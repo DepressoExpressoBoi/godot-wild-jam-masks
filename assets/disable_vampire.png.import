@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fkph8grebcjg"
-path="res://.godot/imported/hover_jack_o_lantern.png-4cb0ab9ad881e5b1877aa86b95c5f04e.ctex"
+uid="uid://cmbwtoa7low8s"
+path="res://.godot/imported/disable_vampire.png-d7483eb0b11a65b0615c9e6a17248f8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hover_jack_o_lantern.png"
-dest_files=["res://.godot/imported/hover_jack_o_lantern.png-4cb0ab9ad881e5b1877aa86b95c5f04e.ctex"]
+source_file="res://assets/disable_vampire.png"
+dest_files=["res://.godot/imported/disable_vampire.png-d7483eb0b11a65b0615c9e6a17248f8c.ctex"]
 
 [params]
 
