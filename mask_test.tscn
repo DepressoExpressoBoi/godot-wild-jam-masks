@@ -1,18 +1,69 @@
-[gd_scene load_steps=2 format=3 uid="uid://bec0t6yqxxr06"]
+[gd_scene load_steps=6 format=3 uid="uid://bec0t6yqxxr06"]
 
 [ext_resource type="Texture2D" uid="uid://dsxwe3ear66nw" path="res://assets/caldron_two_sticker.png" id="1_h7a63"]
+[ext_resource type="Texture2D" uid="uid://t2nwwxjdgd0v" path="res://assets/catto_stickers.png" id="2_8w0ed"]
+[ext_resource type="Texture2D" uid="uid://c2luena2popne" path="res://assets/jack_stickers.png" id="3_o6s8a"]
+[ext_resource type="Texture2D" uid="uid://hq58fnns7hth" path="res://assets/skull_stickers.png" id="4_yqsfe"]
+[ext_resource type="Texture2D" uid="uid://c6mb7ir1qcjqa" path="res://assets/spooder_stickers.png" id="5_3hatv"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
+offset_right = 158.0
+offset_bottom = 134.0
+texture = ExtResource("1_h7a63")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 151.0
+offset_right = 523.0
+offset_bottom = 294.0
+grow_vertical = 0
+size_flags_horizontal = 4
+texture = ExtResource("2_8w0ed")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 313.0
+offset_right = 520.0
+offset_bottom = 406.0
+grow_vertical = 2
+texture = ExtResource("3_o6s8a")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1.0
-offset_top = 88.0
-offset_right = 1113.0
-offset_bottom = 241.0
+offset_top = 422.0
+offset_right = 519.0
+offset_bottom = 523.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_h7a63")
+texture = ExtResource("4_yqsfe")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 537.0
+offset_right = 524.0
+offset_bottom = 617.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_3hatv")
+metadata/_edit_use_anchors_ = true
