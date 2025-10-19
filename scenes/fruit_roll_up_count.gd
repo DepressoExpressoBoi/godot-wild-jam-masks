@@ -1,5 +1,10 @@
 extends Label
 
+var doors_node 
+
+func _ready():
+	doors_node = get_node("../Doors")
+	
 func _process(delta):
 	self.text = str(FruitRollUpCounter.FRUCount)
 	if FruitRollUpCounter.FRUCount == 0:
@@ -7,6 +12,6 @@ func _process(delta):
 
 func _on_fruit_roll_up_pressed() -> void:
 	PlayRps.hands = 1
-	Doors.closeDoor()
-	Doors.compChoiceDoor()
+	await doors_node.closeDoor()
+	doors_node.compChoiceDoor()
 	PlayRps.play()
