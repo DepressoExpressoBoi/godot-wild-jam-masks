@@ -14,4 +14,10 @@ func _on_scissors_pressed() -> void:
 	PlayRps.hands = 2
 	await doors_node.closeDoor()
 	doors_node.compChoiceDoor()
-	PlayRps.play()
+	var result = PlayRps.play()
+	
+	if result == "tie":
+		await get_tree().create_timer(2).timeout 
+		await doors_node.compChoiceDoorClose()
+		PlayRps.tryAgain() 
+		await doors_node.retry() 
