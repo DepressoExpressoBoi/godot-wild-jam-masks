@@ -22,6 +22,11 @@ JawBreakerCounter="*res://JawBreakerCounter.gd"
 ScissorsCounter="*res://ScissorsCounter.gd"
 PlayRps="*res://PlayRPS.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

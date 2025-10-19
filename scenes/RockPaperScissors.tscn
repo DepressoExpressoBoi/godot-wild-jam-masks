@@ -1,11 +1,17 @@
-[gd_scene load_steps=20 format=3 uid="uid://8x05u8pfs2ax"]
+[gd_scene load_steps=23 format=3 uid="uid://8x05u8pfs2ax"]
 
-[ext_resource type="Texture2D" uid="uid://bk3aw1ljkqk1f" path="res://assets/BackgroundImages/door.jpg" id="1_pxa8e"]
+[ext_resource type="Script" uid="uid://d1wsph82bs2oj" path="res://scenes/doors.gd" id="1_g4og7"]
 [ext_resource type="Texture2D" uid="uid://lkpu4ukady7n" path="res://assets/RPSSprites/FruitRollUp/FruitRollUp.png" id="2_jqhtl"]
+[ext_resource type="Texture2D" uid="uid://pg3i47jb7cww" path="res://assets/RPSSprites/Doors/closed.png" id="2_ycgj2"]
 [ext_resource type="Texture2D" uid="uid://c1awqk4tfjbs0" path="res://assets/RPSSprites/FruitRollUp/selected.png" id="3_0mspb"]
+[ext_resource type="Texture2D" uid="uid://cjepjmroichcy" path="res://assets/RPSSprites/Doors/open.png" id="3_juae1"]
 [ext_resource type="Texture2D" uid="uid://cmv6y11cmw2ib" path="res://assets/RPSSprites/FruitRollUp/hovered.png" id="4_jnumi"]
+[ext_resource type="Texture2D" uid="uid://c6gsx8y8u2d1x" path="res://assets/RPSSprites/Doors/3hands.png" id="4_uygni"]
 [ext_resource type="Texture2D" uid="uid://c4ogl27rj7ylx" path="res://assets/RPSSprites/FruitRollUp/disabled.png" id="5_7cw88"]
+[ext_resource type="Texture2D" uid="uid://dugixc7r66i5e" path="res://assets/RPSSprites/Doors/rock.png" id="5_xoaiu"]
+[ext_resource type="Texture2D" uid="uid://dw1flaum5m1nl" path="res://assets/RPSSprites/Doors/paper.png" id="6_nhi56"]
 [ext_resource type="Texture2D" uid="uid://c5su5k145lad0" path="res://assets/RPSSprites/JawBreaker/JawBreaker.png" id="6_textl"]
+[ext_resource type="Texture2D" uid="uid://chv4vg0k6cbsg" path="res://assets/RPSSprites/Doors/scissors.png" id="7_2aaop"]
 [ext_resource type="Texture2D" uid="uid://qomuy8o6ba75" path="res://assets/RPSSprites/JawBreaker/selected.png" id="7_ipu46"]
 [ext_resource type="Texture2D" uid="uid://b3hd8bu7thi70" path="res://assets/RPSSprites/JawBreaker/hovered.png" id="8_m0ndh"]
 [ext_resource type="Texture2D" uid="uid://wsjnii3l3b04" path="res://assets/RPSSprites/JawBreaker/disabled.png" id="9_3fxu7"]
@@ -17,105 +23,133 @@
 [ext_resource type="Script" uid="uid://csqnqvmwdmc2t" path="res://scenes/jaw_breaker_count.gd" id="15_m0ndh"]
 [ext_resource type="Script" uid="uid://bg1u2pxy0h2wd" path="res://scenes/scissors_count.gd" id="16_3fxu7"]
 
-[sub_resource type="GDScript" id="GDScript_3fxu7"]
-script/source = "extends TextureRect
-
-var hands = 0
-var compChoice = 0
-
-func _ready():
-	compChoice = randi_range(0, 2)
-	
-
-func play():
-	if hands == 0 and compChoice == 0:
-		tryAgain()
-	elif hands == 0 and compChoice == 1:
-		lost()
-	elif hands == 0 and compChoice == 2:
-		won()
-	elif hands == 1 and compChoice == 0:
-		won()
-	elif hands == 1 and compChoice == 1:
-		tryAgain()
-	elif hands == 1 and compChoice == 2:
-		lost()
-	elif hands == 2 and compChoice == 0:
-		lost()
-	elif hands == 2 and compChoice == 1:
-		won()
-	elif hands == 2 and compChoice == 2:
-		tryAgain()
-		
-func tryAgain():
-	print(\"Try Again\")
-	
-func won():
-	print(\"Winner\")
-	
-func lost():
-	print(\"Loser\")
-	
-"
-
-[sub_resource type="FontVariation" id="FontVariation_m0ndh"]
-
-[sub_resource type="FontVariation" id="FontVariation_3fxu7"]
-base_font = SubResource("FontVariation_m0ndh")
-
 [node name="Node" type="Node"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-texture_filter = 1
+[node name="Doors" type="Panel" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_pxa8e")
-script = SubResource("GDScript_3fxu7")
+script = ExtResource("1_g4og7")
 
-[node name="FruitRollUpCount" type="Label" parent="."]
-offset_left = 549.0
-offset_top = 597.0
-offset_right = 595.0
-offset_bottom = 620.0
-theme_override_fonts/font = SubResource("FontVariation_3fxu7")
-script = ExtResource("14_ipu46")
+[node name="Closed" type="TextureRect" parent="Doors"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.506)
+texture = ExtResource("2_ycgj2")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Open" type="TextureRect" parent="Doors"]
+texture_filter = 1
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0517578e-05
+offset_right = 128.0
+offset_bottom = 632.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.506)
+texture = ExtResource("3_juae1")
+
+[node name="3Hands" type="TextureRect" parent="Doors"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0517578e-05
+offset_right = 128.0
+offset_bottom = 632.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.506)
+texture = ExtResource("4_uygni")
+
+[node name="Rock" type="TextureRect" parent="Doors"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0517578e-05
+offset_right = 128.0
+offset_bottom = 632.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.506)
+texture = ExtResource("5_xoaiu")
+
+[node name="Paper" type="TextureRect" parent="Doors"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0517578e-05
+offset_right = 128.0
+offset_bottom = 632.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.506)
+texture = ExtResource("6_nhi56")
+
+[node name="Scissors2" type="TextureRect" parent="Doors"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0517578e-05
+offset_right = 128.0
+offset_bottom = 632.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.506)
+texture = ExtResource("7_2aaop")
 
 [node name="JawBreakerCount" type="Label" parent="."]
-offset_left = 403.0
-offset_top = 596.0
-offset_right = 443.0
-offset_bottom = 619.0
+offset_left = 320.0
+offset_top = 580.0
+offset_right = 360.0
+offset_bottom = 603.0
+scale = Vector2(2, 2)
 script = ExtResource("15_m0ndh")
-
-[node name="ScissorsCount" type="Label" parent="."]
-offset_left = 700.0
-offset_top = 598.0
-offset_right = 740.0
-offset_bottom = 621.0
-script = ExtResource("16_3fxu7")
 
 [node name="JawBreaker" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 355.0
-offset_top = 474.99997
-offset_right = 995.0
-offset_bottom = 1115.0
-scale = Vector2(0.2, 0.2)
+offset_left = 239.00002
+offset_top = 435.00003
+offset_right = 879.0
+offset_bottom = 1075.0
+scale = Vector2(0.27, 0.27)
 texture_normal = ExtResource("6_textl")
 texture_pressed = ExtResource("7_ipu46")
 texture_hover = ExtResource("8_m0ndh")
 texture_disabled = ExtResource("9_3fxu7")
 
+[node name="FruitRollUpCount" type="Label" parent="."]
+offset_left = 481.0
+offset_top = 581.0
+offset_right = 527.0
+offset_bottom = 623.0
+scale = Vector2(2, 2)
+script = ExtResource("14_ipu46")
+
 [node name="FruitRollUp" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 513.0
-offset_top = 461.99997
-offset_right = 1153.0
-offset_bottom = 1102.0
-scale = Vector2(0.2, 0.2)
+offset_left = 428.0
+offset_top = 435.0
+offset_right = 1068.0
+offset_bottom = 1075.0
+scale = Vector2(0.23, 0.23)
 size_flags_vertical = 8
 texture_normal = ExtResource("2_jqhtl")
 texture_pressed = ExtResource("3_0mspb")
@@ -123,13 +157,21 @@ texture_hover = ExtResource("4_jnumi")
 texture_disabled = ExtResource("5_7cw88")
 stretch_mode = 3
 
+[node name="ScissorsCount" type="Label" parent="."]
+offset_left = 650.0
+offset_top = 580.0
+offset_right = 690.0
+offset_bottom = 603.0
+scale = Vector2(2, 2)
+script = ExtResource("16_3fxu7")
+
 [node name="Scissors" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 659.0
-offset_top = 456.99997
-offset_right = 1299.0
-offset_bottom = 1097.0
-scale = Vector2(0.2, 0.2)
+offset_left = 589.0
+offset_top = 434.0
+offset_right = 1229.0
+offset_bottom = 1074.0
+scale = Vector2(0.23, 0.23)
 texture_normal = ExtResource("10_5x85t")
 texture_pressed = ExtResource("11_rqdq0")
 texture_hover = ExtResource("12_04o1h")
