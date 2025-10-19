@@ -1,7 +1,10 @@
 extends Panel
-
+#func _init() -> void:
+	#retry()
+	
 func _ready():
 	retry()
+	print(get_tree())
 
 func closeDoor():
 	$"3Hands".visible = false

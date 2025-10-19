@@ -9,5 +9,6 @@ script = ExtResource("1_i2ynb")
 wait_time = 10.0
 one_shot = true
 autostart = true
+ignore_time_scale = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

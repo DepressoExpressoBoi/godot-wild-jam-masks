@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+#@onready var rps = preload("res://scenes/RPSScenes/RockPaperScissors.tscn").instance()
+
 const speed = 300
 
 func _physics_process(_delta):
@@ -23,4 +25,6 @@ func die():
 
 func _on_area_2d_body_entered(body: Node2D):
 	if body.is_in_group("houses"):
-		print("entering house")
+		#get_parent().add_child(rps)
+		#get_parent().remove_child(self)
+		get_tree().change_scene_to_file("res://scenes/RPSScenes/RockPaperScissors.tscn")

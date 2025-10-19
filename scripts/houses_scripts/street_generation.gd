@@ -32,14 +32,18 @@ var erase_fraction = 0.1
 @onready var house_map = $"../Houses"
 @onready var player = $"../Player"
 
+var initialized = 0
+
 func _ready():
-	randomize()
-	make_maze()
-	erase_walls()
-	place_houses()
-	var rileys_house = place_rileys_house()
-	
-	player.position = rileys_house
+	if initialized == 0:
+		initialized += 1
+		randomize()
+		make_maze()
+		erase_walls()
+		place_houses()
+		var rileys_house = place_rileys_house()
+		
+		player.position = rileys_house
 
 	
 func place_houses():
