@@ -21,7 +21,7 @@ FruitRollUpCounter="*res://scripts/RPSCode/FruitRollUpCounter.gd"
 JawBreakerCounter="*res://scripts/RPSCode/JawBreakerCounter.gd"
 ScissorsCounter="*res://scripts/RPSCode/ScissorsCounter.gd"
 PlayRps="*res://scripts/RPSCode/PlayRPS.gd"
-Doors="*res://scenes/Doors.tscn"
+Doors="*res://scenes/RPSScenes/Doors.tscn"
 
 [display]
 

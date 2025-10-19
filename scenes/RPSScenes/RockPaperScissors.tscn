@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://8x05u8pfs2ax"]
 
-[ext_resource type="PackedScene" uid="uid://lulwk5mtevqn" path="res://scenes/Doors.tscn" id="1_3fxu7"]
+[ext_resource type="PackedScene" uid="uid://lulwk5mtevqn" path="res://scenes/RPSScenes/Doors.tscn" id="1_3fxu7"]
 [ext_resource type="Texture2D" uid="uid://lkpu4ukady7n" path="res://assets/RPSSprites/FruitRollUp/FruitRollUp.png" id="2_jqhtl"]
 [ext_resource type="Texture2D" uid="uid://c1awqk4tfjbs0" path="res://assets/RPSSprites/FruitRollUp/selected.png" id="3_0mspb"]
 [ext_resource type="Texture2D" uid="uid://cmv6y11cmw2ib" path="res://assets/RPSSprites/FruitRollUp/hovered.png" id="4_jnumi"]
