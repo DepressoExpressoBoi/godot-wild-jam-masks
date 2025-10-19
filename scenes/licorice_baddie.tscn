@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dhvgtrkb5bpxg"]
 
-[ext_resource type="Script" uid="uid://cyog0u6co6yhw" path="res://scripts/licorice_baddie.gd" id="1_045hx"]
+[ext_resource type="Script" uid="uid://cyog0u6co6yhw" path="res://scripts/houses_scripts/licorice_baddie.gd" id="1_045hx"]
 [ext_resource type="Texture2D" uid="uid://d2jn6g2jmcp2t" path="res://assets/licorice-baddie.png" id="1_miujr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_045hx"]

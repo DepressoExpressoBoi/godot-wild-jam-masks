@@ -8,6 +8,6 @@ var licorice_baddie_scene = preload("res://scenes/licorice_baddie.tscn")
 func _on_timer_timeout():
 	var licorice_baddie = licorice_baddie_scene.instantiate()
 	
-	licorice_baddie.position = player.position
+	licorice_baddie.position = player.position - Vector2(200, 200)
 	
 	main.add_child(licorice_baddie)

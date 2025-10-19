@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://e47yy2gsx3to"]
 
-[ext_resource type="Script" uid="uid://cs3akh2fljb0b" path="res://licorice_spawner.gd" id="1_i2ynb"]
+[ext_resource type="Script" uid="uid://cs3akh2fljb0b" path="res://scripts/houses_scripts/licorice_spawner.gd" id="1_i2ynb"]
 
 [node name="licorice_spawner" type="Node2D"]
 script = ExtResource("1_i2ynb")

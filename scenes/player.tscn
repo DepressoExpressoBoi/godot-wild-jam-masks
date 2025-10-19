@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b6ahhyj0yp3gr"]
 
-[ext_resource type="Script" uid="uid://bu5fbda8nrcy3" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://bu5fbda8nrcy3" path="res://scripts/houses_scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://3v5x3f7b6ljp" path="res://assets/player.png" id="2_g2els"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
