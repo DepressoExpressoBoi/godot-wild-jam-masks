@@ -52,6 +52,7 @@ offset_left = -14.0
 offset_top = -9.0
 offset_right = 1159.0
 offset_bottom = 659.0
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_3fedq")
 
 [node name="frankenstein" type="Panel" parent="."]
@@ -64,6 +65,7 @@ offset_right = 847.0
 offset_bottom = 585.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_0u167")
 
 [node name="back_Button" type="Button" parent="."]
@@ -103,7 +105,7 @@ text = "Next
 "
 
 [node name="cat_drag" parent="." instance=ExtResource("4_ebl50")]
-position = Vector2(614, -159)
+position = Vector2(608, -155)
 
 [node name="spider_drag" parent="." instance=ExtResource("5_8pyfc")]
 position = Vector2(553, -84)

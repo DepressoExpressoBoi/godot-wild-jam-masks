@@ -49,11 +49,11 @@ shadow_offset = Vector2(0, 3.5)
 script = ExtResource("1_xrq1v")
 
 [node name="table" type="Panel" parent="."]
-visible = false
 offset_left = -8.0
 offset_top = -9.0
 offset_right = 1165.0
 offset_bottom = 659.0
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_k7vlo")
 
 [node name="vampire" type="Panel" parent="."]
@@ -66,6 +66,7 @@ offset_right = 844.0
 offset_bottom = 579.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_1s0x6")
 
 [node name="back_Button" type="Button" parent="."]
