@@ -13,9 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://bwib2qnenoxgx" path="res://assets/RPSSprites/Scissors/selected.png" id="11_rqdq0"]
 [ext_resource type="Texture2D" uid="uid://byvkfibdrrdsa" path="res://assets/RPSSprites/Scissors/hovered.png" id="12_04o1h"]
 [ext_resource type="Texture2D" uid="uid://b88v1gjc485ct" path="res://assets/RPSSprites/Scissors/disabled.png" id="13_4byi1"]
-[ext_resource type="Script" uid="uid://n0vj2kvdwkl5" path="res://scenes/fruit_roll_up_count.gd" id="14_ipu46"]
-[ext_resource type="Script" uid="uid://csqnqvmwdmc2t" path="res://scenes/jaw_breaker_count.gd" id="15_m0ndh"]
-[ext_resource type="Script" uid="uid://bg1u2pxy0h2wd" path="res://scenes/scissors_count.gd" id="16_3fxu7"]
+[ext_resource type="Script" uid="uid://n0vj2kvdwkl5" path="res://scripts/RPSCode/fruit_roll_up_count.gd" id="14_ipu46"]
+[ext_resource type="Script" uid="uid://csqnqvmwdmc2t" path="res://scripts/RPSCode/jaw_breaker_count.gd" id="15_m0ndh"]
+[ext_resource type="Script" uid="uid://bg1u2pxy0h2wd" path="res://scripts/RPSCode/scissors_count.gd" id="16_3fxu7"]
 
 [node name="Node" type="Node"]
 
