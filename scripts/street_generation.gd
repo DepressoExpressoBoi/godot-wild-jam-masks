@@ -30,12 +30,16 @@ var erase_fraction = 0.1
 
 @onready var map = $"."
 @onready var house_map = $"../Houses"
+@onready var player = $"../Player"
 
 func _ready():
 	randomize()
 	make_maze()
 	erase_walls()
 	place_houses()
+	var rileys_house = place_rileys_house()
+	
+	player.position = rileys_house
 
 	
 func place_houses():
@@ -43,6 +47,19 @@ func place_houses():
 		for y in range(height):
 			if tile_indices[map.get_cell_atlas_coords(Vector2i(x, y))] == 15:
 				house_map.set_cell(Vector2i(x, y), 0, house_coords[randi_range(1, 4)])
+	
+				
+func place_rileys_house():
+	for x in range(8, width - 1):
+		for y in range(8, height - 1):
+			
+			if house_map.get_cell_atlas_coords(Vector2i(x, y)) != Vector2i(-1, -1) and tile_indices[map.get_cell_atlas_coords(Vector2i(x, y + 1))] == 5:
+				house_map.set_cell(Vector2i(x, y), 0, Vector2i(0, 2))
+				
+				return map.to_global(Vector2i(x, y + 1)) * Vector2(68, 64)
+
+	return "bad"
+	
 			
 	
 func erase_walls():

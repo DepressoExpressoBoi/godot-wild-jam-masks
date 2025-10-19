@@ -17,7 +17,9 @@ func _physics_process(_delta):
 		velocity.y = move_toward(velocity.y, 0, speed)
 
 	move_and_slide()
-	
+
+func die():
+	queue_free()
 
 func _on_area_2d_body_entered(body: Node2D):
 	if body.is_in_group("houses"):
