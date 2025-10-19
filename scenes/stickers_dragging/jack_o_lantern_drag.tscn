@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7130qtbbsnbo"]
 
 [ext_resource type="Script" uid="uid://jayk4i0u0d5u" path="res://scripts/masks_code/jack_o_lantern_drag.gd" id="1_0mew5"]
-[ext_resource type="Texture2D" uid="uid://b0wl7ajut3k06" path="res://assets/jack_o_lantern_clear.PNG" id="1_50r0y"]
+[ext_resource type="Texture2D" uid="uid://b0wl7ajut3k06" path="res://assets/stickers_assets/jack_o_lantern_clear.PNG" id="1_50r0y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0mew5"]
 size = Vector2(82, 82)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://dsa71x24wtm8o"]
 
 [ext_resource type="Script" uid="uid://53363v6q4co5" path="res://scripts/masks_code/frankenstein_mask.gd" id="1_rdsai"]
-[ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="2_dldow"]
-[ext_resource type="Texture2D" uid="uid://d0u5n66c8xxkg" path="res://assets/frankenstein_clear.PNG" id="3_ahd2u"]
+[ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/mask_background_other/table_top_light.jpg" id="2_dldow"]
+[ext_resource type="Texture2D" uid="uid://d0u5n66c8xxkg" path="res://assets/masks_assets_other/frankenstein_clear.PNG" id="3_ahd2u"]
 [ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/stickers_dragging/cat_drag.tscn" id="4_ebl50"]
 [ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/masks_drag/spider_drag.tscn" id="5_8pyfc"]
 [ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/stickers_dragging/caldron_drag.tscn" id="6_c40b0"]

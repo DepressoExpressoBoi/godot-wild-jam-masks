@@ -1,20 +1,20 @@
 [gd_scene load_steps=16 format=3 uid="uid://cc088gvpycubr"]
 
-[ext_resource type="Script" uid="uid://dwu38dnjwdsp6" path="res://scripts/masks_code/vampire_mask.gd" id="1_1s0x6"]
-[ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="1_kicrw"]
-[ext_resource type="Texture2D" uid="uid://cxh0dp5lt68y4" path="res://assets/vampire_clear.PNG" id="2_kicrw"]
-[ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/stickers_dragging/cat_drag.tscn" id="4_gxlsr"]
-[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/stickers_dragging/caldron_drag.tscn" id="5_3qns0"]
-[ext_resource type="PackedScene" uid="uid://sfjst1e38b48" path="res://scenes/masks_drag/skull_drag.tscn" id="6_64rg4"]
-[ext_resource type="Script" uid="uid://dgukceo5r6uef" path="res://scripts/masks_code/caldron_drag.gd" id="7_hfnn7"]
-[ext_resource type="PackedScene" uid="uid://c7130qtbbsnbo" path="res://scenes/stickers_dragging/jack_o_lantern_drag.tscn" id="8_cug0l"]
-[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/masks_drag/spider_drag.tscn" id="9_aaw3u"]
+[ext_resource type="Script" uid="uid://dwu38dnjwdsp6" path="res://scripts/masks_code/vampire_mask.gd" id="1_xrq1v"]
+[ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/mask_background_other/table_top_light.jpg" id="2_3n434"]
+[ext_resource type="Texture2D" uid="uid://cxh0dp5lt68y4" path="res://assets/masks_assets_other/vampire_clear.PNG" id="3_hbv4q"]
+[ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/stickers_dragging/cat_drag.tscn" id="4_bb6y2"]
+[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/masks_drag/spider_drag.tscn" id="5_ex07r"]
+[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/stickers_dragging/caldron_drag.tscn" id="6_c7x6j"]
+[ext_resource type="PackedScene" uid="uid://c7130qtbbsnbo" path="res://scenes/stickers_dragging/jack_o_lantern_drag.tscn" id="7_ygfbl"]
+[ext_resource type="PackedScene" uid="uid://sfjst1e38b48" path="res://scenes/masks_drag/skull_drag.tscn" id="8_05yu2"]
+[ext_resource type="Script" uid="uid://dgukceo5r6uef" path="res://scripts/masks_code/caldron_drag.gd" id="9_5x5sy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7vlo"]
-texture = ExtResource("1_kicrw")
+texture = ExtResource("2_3n434")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1s0x6"]
-texture = ExtResource("2_kicrw")
+texture = ExtResource("3_hbv4q")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1s0x6"]
 bg_color = Color(1, 1, 1, 1)
@@ -46,7 +46,7 @@ shadow_offset = Vector2(0, 3.5)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xktqf"]
 
 [node name="vampire_mask" type="Node2D"]
-script = ExtResource("1_1s0x6")
+script = ExtResource("1_xrq1v")
 
 [node name="table" type="Panel" parent="."]
 visible = false
@@ -104,21 +104,21 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_xktqf")
 text = "Next
 "
 
-[node name="cat_drag" parent="." instance=ExtResource("4_gxlsr")]
+[node name="cat_drag" parent="." instance=ExtResource("4_bb6y2")]
 position = Vector2(613, -145)
 
-[node name="spider_drag" parent="." instance=ExtResource("9_aaw3u")]
+[node name="spider_drag" parent="." instance=ExtResource("5_ex07r")]
 position = Vector2(552, -70)
 
-[node name="caldron_drag" parent="." instance=ExtResource("5_3qns0")]
+[node name="caldron_drag" parent="." instance=ExtResource("6_c7x6j")]
 position = Vector2(550, -26)
 
-[node name="jack_drag" parent="." instance=ExtResource("8_cug0l")]
+[node name="jack_drag" parent="." instance=ExtResource("7_ygfbl")]
 position = Vector2(592, 177)
 
-[node name="skull_drag" parent="." instance=ExtResource("6_64rg4")]
+[node name="skull_drag" parent="." instance=ExtResource("8_05yu2")]
 position = Vector2(612, 251)
-script = ExtResource("7_hfnn7")
+script = ExtResource("9_5x5sy")
 
 [connection signal="pressed" from="back_Button" to="." method="_on_back_vampire_button_pressed"]
 [connection signal="pressed" from="next_Button" to="." method="_on_next_button_pressed"]

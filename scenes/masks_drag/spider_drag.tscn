@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://q2p0omuvx3n4"]
 
 [ext_resource type="Script" uid="uid://bdfoiwm4r71tj" path="res://scripts/masks_code/spider_drag.gd" id="1_apg10"]
-[ext_resource type="Texture2D" uid="uid://br3uj87mopa6e" path="res://assets/spider_clear.PNG" id="1_nvssr"]
+[ext_resource type="Texture2D" uid="uid://br3uj87mopa6e" path="res://assets/stickers_assets/spider_clear.PNG" id="1_nvssr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvssr"]
 size = Vector2(73.91474, 53.38416)

@@ -1,25 +1,25 @@
 [gd_scene load_steps=16 format=3 uid="uid://ppcmqjbug43q"]
 
-[ext_resource type="Texture2D" uid="uid://dposj3jx41rg" path="res://assets/franenkstein_sticker_final.png" id="1_fkjdv"]
-[ext_resource type="Script" uid="uid://bephxqvk7i588" path="res://scripts/masks_code/mask_demo.gd" id="1_gpvn3"]
-[ext_resource type="Texture2D" uid="uid://ctfukfall2x00" path="res://scenes/masks_background/blank_menu_bkgrnd.png" id="1_qu74m"]
-[ext_resource type="Texture2D" uid="uid://bu5tjgs1f4hxs" path="res://assets/pressed_franenstein.png" id="2_yiq8b"]
-[ext_resource type="Texture2D" uid="uid://blmgpxxj4vp6n" path="res://assets/hover_franenstein.png" id="3_choqs"]
-[ext_resource type="Texture2D" uid="uid://bao2ql8ekh0d0" path="res://assets/disable_franenstein.png" id="4_aeysp"]
-[ext_resource type="Texture2D" uid="uid://cp17p6kwc7x35" path="res://assets/vampire_org.png" id="25_4virg"]
-[ext_resource type="Texture2D" uid="uid://c5xaixefgm1v4" path="res://assets/pressed_vampire.png" id="26_qqe6m"]
-[ext_resource type="Texture2D" uid="uid://dwr88kulvmjds" path="res://assets/hover_vampire.png" id="27_uwcqf"]
-[ext_resource type="Texture2D" uid="uid://cmbwtoa7low8s" path="res://assets/disable_vampire.png" id="28_gwkys"]
-[ext_resource type="Texture2D" uid="uid://cgrlgit1645n2" path="res://assets/werewolf_org.png" id="29_k3tvp"]
-[ext_resource type="Texture2D" uid="uid://cikiga22v0u6v" path="res://assets/pressed_werewolf.png" id="30_k4mo4"]
-[ext_resource type="Texture2D" uid="uid://dbuvw8naeeo83" path="res://assets/hover_werewolf.png" id="31_gajbn"]
-[ext_resource type="Texture2D" uid="uid://b8jn275nox557" path="res://assets/disbale_werewolf.png" id="32_vtnjt"]
+[ext_resource type="Script" uid="uid://bephxqvk7i588" path="res://scripts/masks_code/mask_demo.gd" id="1_fvhkg"]
+[ext_resource type="Texture2D" uid="uid://ctfukfall2x00" path="res://scenes/masks_background/blank_menu_bkgrnd.png" id="2_2msn8"]
+[ext_resource type="Texture2D" uid="uid://dposj3jx41rg" path="res://assets/masks_assets_other/franenkstein_sticker_final.png" id="3_rau0m"]
+[ext_resource type="Texture2D" uid="uid://bu5tjgs1f4hxs" path="res://assets/masks_assets_other/pressed_franenstein.png" id="4_pl2sm"]
+[ext_resource type="Texture2D" uid="uid://blmgpxxj4vp6n" path="res://assets/masks_assets_other/hover_franenstein.png" id="5_t65ta"]
+[ext_resource type="Texture2D" uid="uid://bao2ql8ekh0d0" path="res://assets/masks_assets_other/disable_franenstein.png" id="6_550xn"]
+[ext_resource type="Texture2D" uid="uid://cp17p6kwc7x35" path="res://assets/masks_assets_other/vampire_org.png" id="7_3dmre"]
+[ext_resource type="Texture2D" uid="uid://c5xaixefgm1v4" path="res://assets/masks_assets_other/pressed_vampire.png" id="8_mikpj"]
+[ext_resource type="Texture2D" uid="uid://dwr88kulvmjds" path="res://assets/masks_assets_other/hover_vampire.png" id="9_5e2pj"]
+[ext_resource type="Texture2D" uid="uid://cmbwtoa7low8s" path="res://assets/masks_assets_other/disable_vampire.png" id="10_ny56m"]
+[ext_resource type="Texture2D" uid="uid://cgrlgit1645n2" path="res://assets/masks_assets_other/werewolf_org.png" id="11_nivrl"]
+[ext_resource type="Texture2D" uid="uid://cikiga22v0u6v" path="res://assets/masks_assets_other/pressed_werewolf.png" id="12_385fc"]
+[ext_resource type="Texture2D" uid="uid://dbuvw8naeeo83" path="res://assets/masks_assets_other/hover_werewolf.png" id="13_ehubh"]
+[ext_resource type="Texture2D" uid="uid://b8jn275nox557" path="res://assets/masks_assets_other/disbale_werewolf.png" id="14_7bysv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gpvn3"]
-texture = ExtResource("1_qu74m")
+texture = ExtResource("2_2msn8")
 
 [node name="mask_demo_test" type="Node2D"]
-script = ExtResource("1_gpvn3")
+script = ExtResource("1_fvhkg")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 15
@@ -55,30 +55,30 @@ offset_left = 57.0
 offset_top = 177.0
 offset_right = 357.0
 offset_bottom = 470.0
-texture_normal = ExtResource("1_fkjdv")
-texture_pressed = ExtResource("2_yiq8b")
-texture_hover = ExtResource("3_choqs")
-texture_disabled = ExtResource("4_aeysp")
+texture_normal = ExtResource("3_rau0m")
+texture_pressed = ExtResource("4_pl2sm")
+texture_hover = ExtResource("5_t65ta")
+texture_disabled = ExtResource("6_550xn")
 
 [node name="vampire_Button" type="TextureButton" parent="."]
 offset_left = 435.0
 offset_top = 179.0
 offset_right = 735.5
 offset_bottom = 454.0
-texture_normal = ExtResource("25_4virg")
-texture_pressed = ExtResource("26_qqe6m")
-texture_hover = ExtResource("27_uwcqf")
-texture_disabled = ExtResource("28_gwkys")
+texture_normal = ExtResource("7_3dmre")
+texture_pressed = ExtResource("8_mikpj")
+texture_hover = ExtResource("9_5e2pj")
+texture_disabled = ExtResource("10_ny56m")
 
 [node name="warewolf_Button" type="TextureButton" parent="."]
 offset_left = 808.0
 offset_top = 172.0
 offset_right = 1067.0
 offset_bottom = 472.0
-texture_normal = ExtResource("29_k3tvp")
-texture_pressed = ExtResource("30_k4mo4")
-texture_hover = ExtResource("31_gajbn")
-texture_disabled = ExtResource("32_vtnjt")
+texture_normal = ExtResource("11_nivrl")
+texture_pressed = ExtResource("12_385fc")
+texture_hover = ExtResource("13_ehubh")
+texture_disabled = ExtResource("14_7bysv")
 
 [node name="Label2" type="Label" parent="."]
 anchors_preset = 8
