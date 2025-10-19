@@ -81,6 +81,6 @@ text = "Back
 "
 
 [node name="caldron_drag" parent="." instance=ExtResource("6_v1wun")]
-position = Vector2(48, 233)
+position = Vector2(151, 113)
 
 [connection signal="pressed" from="back_Button" to="." method="_on_back_fran_button_pressed"]
