@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://e47yy2gsx3to"]
+[gd_scene load_steps=2 format=3 uid="uid://c17qfv33q42ih"]
 
 [ext_resource type="Script" uid="uid://cs3akh2fljb0b" path="res://scripts/houses_scripts/licorice_spawner.gd" id="1_i2ynb"]
 
