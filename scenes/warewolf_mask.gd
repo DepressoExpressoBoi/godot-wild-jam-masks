@@ -9,6 +9,6 @@ func _on_back_warewolf_button_pressed() -> void:
 func _on_next_button_pressed() -> void:
 	print("Start pressed")
 	
-	#fill in here 
+	#fill in here too
 	
 	#get_tree().change_scene_to_file("res://scenes/mask_demo.tscn")
