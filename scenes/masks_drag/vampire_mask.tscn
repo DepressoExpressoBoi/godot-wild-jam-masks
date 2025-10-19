@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://cc088gvpycubr"]
 
-[ext_resource type="Script" uid="uid://dwu38dnjwdsp6" path="res://scenes/vampire_mask.gd" id="1_1s0x6"]
+[ext_resource type="Script" uid="uid://dwu38dnjwdsp6" path="res://scripts/masks_code/vampire_mask.gd" id="1_1s0x6"]
 [ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="1_kicrw"]
 [ext_resource type="Texture2D" uid="uid://cxh0dp5lt68y4" path="res://assets/vampire_clear.PNG" id="2_kicrw"]
-[ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/cat_drag.tscn" id="4_gxlsr"]
-[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/caldron_drag.tscn" id="5_3qns0"]
-[ext_resource type="PackedScene" uid="uid://sfjst1e38b48" path="res://scenes/skull_drag.tscn" id="6_64rg4"]
-[ext_resource type="Script" uid="uid://dgukceo5r6uef" path="res://scenes/caldron_drag.gd" id="7_hfnn7"]
-[ext_resource type="PackedScene" uid="uid://c7130qtbbsnbo" path="res://scenes/jack_o_lantern_drag.tscn" id="8_cug0l"]
-[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/spider_drag.tscn" id="9_aaw3u"]
+[ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/stickers_dragging/cat_drag.tscn" id="4_gxlsr"]
+[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/stickers_dragging/caldron_drag.tscn" id="5_3qns0"]
+[ext_resource type="PackedScene" uid="uid://sfjst1e38b48" path="res://scenes/masks_drag/skull_drag.tscn" id="6_64rg4"]
+[ext_resource type="Script" uid="uid://dgukceo5r6uef" path="res://scripts/masks_code/caldron_drag.gd" id="7_hfnn7"]
+[ext_resource type="PackedScene" uid="uid://c7130qtbbsnbo" path="res://scenes/stickers_dragging/jack_o_lantern_drag.tscn" id="8_cug0l"]
+[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/masks_drag/spider_drag.tscn" id="9_aaw3u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7vlo"]
 texture = ExtResource("1_kicrw")

@@ -1,13 +1,13 @@
 [gd_scene load_steps=15 format=3 uid="uid://bo1gde57x0sdq"]
 
-[ext_resource type="Script" uid="uid://cy1a88ikixhfq" path="res://scenes/warewolf_mask.gd" id="1_d1y63"]
+[ext_resource type="Script" uid="uid://cy1a88ikixhfq" path="res://scripts/masks_code/warewolf_mask.gd" id="1_d1y63"]
 [ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="1_g8ryf"]
 [ext_resource type="Texture2D" uid="uid://d218xd3lc0e78" path="res://assets/warewolf_clear.PNG" id="2_g8ryf"]
-[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/spider_drag.tscn" id="4_57xe0"]
-[ext_resource type="PackedScene" uid="uid://sfjst1e38b48" path="res://scenes/skull_drag.tscn" id="5_bwhvx"]
-[ext_resource type="PackedScene" uid="uid://c7130qtbbsnbo" path="res://scenes/jack_o_lantern_drag.tscn" id="6_v1lro"]
-[ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/cat_drag.tscn" id="7_xcr2o"]
-[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/caldron_drag.tscn" id="8_e5in0"]
+[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/masks_drag/spider_drag.tscn" id="4_57xe0"]
+[ext_resource type="PackedScene" uid="uid://sfjst1e38b48" path="res://scenes/masks_drag/skull_drag.tscn" id="5_bwhvx"]
+[ext_resource type="PackedScene" uid="uid://c7130qtbbsnbo" path="res://scenes/stickers_dragging/jack_o_lantern_drag.tscn" id="6_v1lro"]
+[ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/stickers_dragging/cat_drag.tscn" id="7_xcr2o"]
+[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/stickers_dragging/caldron_drag.tscn" id="8_e5in0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_db7ex"]
 texture = ExtResource("1_g8ryf")

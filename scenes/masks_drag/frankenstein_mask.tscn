@@ -1,19 +1,19 @@
 [gd_scene load_steps=15 format=3 uid="uid://dsa71x24wtm8o"]
 
-[ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="1_816bp"]
-[ext_resource type="Script" uid="uid://53363v6q4co5" path="res://scenes/frankenstein_mask.gd" id="1_da6do"]
-[ext_resource type="Texture2D" uid="uid://d0u5n66c8xxkg" path="res://assets/frankenstein_clear.PNG" id="2_da6do"]
-[ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/cat_drag.tscn" id="4_skwkt"]
-[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/spider_drag.tscn" id="5_d2ods"]
-[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/caldron_drag.tscn" id="6_v1wun"]
-[ext_resource type="PackedScene" uid="uid://c7130qtbbsnbo" path="res://scenes/jack_o_lantern_drag.tscn" id="7_6uc6j"]
-[ext_resource type="PackedScene" uid="uid://sfjst1e38b48" path="res://scenes/skull_drag.tscn" id="8_3c43h"]
+[ext_resource type="Script" uid="uid://53363v6q4co5" path="res://scripts/masks_code/frankenstein_mask.gd" id="1_rdsai"]
+[ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="2_dldow"]
+[ext_resource type="Texture2D" uid="uid://d0u5n66c8xxkg" path="res://assets/frankenstein_clear.PNG" id="3_ahd2u"]
+[ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/stickers_dragging/cat_drag.tscn" id="4_ebl50"]
+[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/masks_drag/spider_drag.tscn" id="5_8pyfc"]
+[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/stickers_dragging/caldron_drag.tscn" id="6_c40b0"]
+[ext_resource type="PackedScene" uid="uid://c7130qtbbsnbo" path="res://scenes/stickers_dragging/jack_o_lantern_drag.tscn" id="7_ubgd5"]
+[ext_resource type="PackedScene" uid="uid://sfjst1e38b48" path="res://scenes/masks_drag/skull_drag.tscn" id="8_fxmqo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3fedq"]
-texture = ExtResource("1_816bp")
+texture = ExtResource("2_dldow")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0u167"]
-texture = ExtResource("2_da6do")
+texture = ExtResource("3_ahd2u")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_da6do"]
 bg_color = Color(1, 1, 1, 1)
@@ -45,7 +45,7 @@ shadow_offset = Vector2(0, 3.5)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w75v7"]
 
 [node name="frankenstein_mask" type="Node2D"]
-script = ExtResource("1_da6do")
+script = ExtResource("1_rdsai")
 
 [node name="table" type="Panel" parent="."]
 visible = false
@@ -103,19 +103,19 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_w75v7")
 text = "Next
 "
 
-[node name="cat_drag" parent="." instance=ExtResource("4_skwkt")]
+[node name="cat_drag" parent="." instance=ExtResource("4_ebl50")]
 position = Vector2(614, -159)
 
-[node name="spider_drag" parent="." instance=ExtResource("5_d2ods")]
+[node name="spider_drag" parent="." instance=ExtResource("5_8pyfc")]
 position = Vector2(553, -84)
 
-[node name="caldron_drag" parent="." instance=ExtResource("6_v1wun")]
+[node name="caldron_drag" parent="." instance=ExtResource("6_c40b0")]
 position = Vector2(553, -37)
 
-[node name="jack_drag" parent="." instance=ExtResource("7_6uc6j")]
+[node name="jack_drag" parent="." instance=ExtResource("7_ubgd5")]
 position = Vector2(592, 166)
 
-[node name="skull_drag" parent="." instance=ExtResource("8_3c43h")]
+[node name="skull_drag" parent="." instance=ExtResource("8_fxmqo")]
 position = Vector2(610, 247)
 
 [connection signal="pressed" from="back_Button" to="." method="_on_back_fran_button_pressed"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctfukfall2x00"
-path="res://.godot/imported/blank_menu_bkgrnd.png-b84e28b8a7b096eec2c502ce823b8196.ctex"
+path="res://.godot/imported/blank_menu_bkgrnd.png-1459e8509c7d83599d7abf6c9564b406.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/blank_menu_bkgrnd.png"
-dest_files=["res://.godot/imported/blank_menu_bkgrnd.png-b84e28b8a7b096eec2c502ce823b8196.ctex"]
+source_file="res://scenes/masks_background/blank_menu_bkgrnd.png"
+dest_files=["res://.godot/imported/blank_menu_bkgrnd.png-1459e8509c7d83599d7abf6c9564b406.ctex"]
 
 [params]
 

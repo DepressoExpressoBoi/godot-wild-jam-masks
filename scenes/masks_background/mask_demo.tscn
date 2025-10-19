@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://ppcmqjbug43q"]
 
 [ext_resource type="Texture2D" uid="uid://dposj3jx41rg" path="res://assets/franenkstein_sticker_final.png" id="1_fkjdv"]
-[ext_resource type="Script" uid="uid://bephxqvk7i588" path="res://scenes/mask_demo.gd" id="1_gpvn3"]
-[ext_resource type="Texture2D" uid="uid://ctfukfall2x00" path="res://scenes/blank_menu_bkgrnd.png" id="1_qu74m"]
+[ext_resource type="Script" uid="uid://bephxqvk7i588" path="res://scripts/masks_code/mask_demo.gd" id="1_gpvn3"]
+[ext_resource type="Texture2D" uid="uid://ctfukfall2x00" path="res://scenes/masks_background/blank_menu_bkgrnd.png" id="1_qu74m"]
 [ext_resource type="Texture2D" uid="uid://bu5tjgs1f4hxs" path="res://assets/pressed_franenstein.png" id="2_yiq8b"]
 [ext_resource type="Texture2D" uid="uid://blmgpxxj4vp6n" path="res://assets/hover_franenstein.png" id="3_choqs"]
 [ext_resource type="Texture2D" uid="uid://bao2ql8ekh0d0" path="res://assets/disable_franenstein.png" id="4_aeysp"]
