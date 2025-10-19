@@ -10,5 +10,6 @@ func _on_next_button_pressed() -> void:
 	print("Start pressed")
 	
 	#fill in here too
+	get_tree().change_scene_to_file("res://scenes/trick_or_treating.tscn")
 	
 	#get_tree().change_scene_to_file("res://scenes/mask_demo.tscn")
