@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt5tb"]
 size = Vector2(77, 112)
 
-[node name="cat" type="Node2D"]
+[node name="cat_drag" type="Node2D"]
 script = ExtResource("1_vt5tb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

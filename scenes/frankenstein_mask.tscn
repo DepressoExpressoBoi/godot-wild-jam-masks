@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dsa71x24wtm8o"]
+[gd_scene load_steps=13 format=3 uid="uid://dsa71x24wtm8o"]
 
 [ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="1_816bp"]
 [ext_resource type="Script" uid="uid://53363v6q4co5" path="res://scenes/frankenstein_mask.gd" id="1_da6do"]
 [ext_resource type="Texture2D" uid="uid://d0u5n66c8xxkg" path="res://assets/frankenstein_clear.PNG" id="2_da6do"]
 [ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/cat_drag.tscn" id="4_skwkt"]
+[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/spider_drag.tscn" id="5_d2ods"]
+[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/caldron_drag.tscn" id="6_v1wun"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3fedq"]
 texture = ExtResource("1_816bp")
@@ -44,20 +46,19 @@ shadow_offset = Vector2(0, 3.5)
 script = ExtResource("1_da6do")
 
 [node name="table" type="Panel" parent="."]
+visible = false
 offset_left = -14.0
 offset_top = -9.0
 offset_right = 1159.0
 offset_bottom = 659.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_3fedq")
 
-[node name="cat" parent="." instance=ExtResource("4_skwkt")]
-position = Vector2(-337, 12)
-
 [node name="frankenstein" type="Panel" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 294.0
+offset_left = 266.0
 offset_top = 34.0
 offset_right = 847.0
 offset_bottom = 585.0
@@ -82,5 +83,14 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_0u167")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_w75v7")
 text = "Back
 "
+
+[node name="spider_drag" parent="." instance=ExtResource("5_d2ods")]
+position = Vector2(-402, 184)
+
+[node name="cat_drag" parent="." instance=ExtResource("4_skwkt")]
+position = Vector2(-366, 11)
+
+[node name="caldron_drag" parent="." instance=ExtResource("6_v1wun")]
+position = Vector2(-433, 286)
 
 [connection signal="pressed" from="back_Button" to="." method="_on_back_fran_button_pressed"]
