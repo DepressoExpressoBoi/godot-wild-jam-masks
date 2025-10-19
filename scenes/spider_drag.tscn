@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvssr"]
 size = Vector2(73.91474, 53.38416)
 
-[node name="spider" type="Node2D"]
+[node name="spider_drag" type="Node2D"]
 script = ExtResource("1_apg10")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

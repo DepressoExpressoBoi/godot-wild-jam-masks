@@ -1,30 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://dsa71x24wtm8o"]
+[gd_scene load_steps=11 format=3 uid="uid://dsa71x24wtm8o"]
 
 [ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="1_816bp"]
 [ext_resource type="Script" uid="uid://53363v6q4co5" path="res://scenes/frankenstein_mask.gd" id="1_da6do"]
 [ext_resource type="Texture2D" uid="uid://d0u5n66c8xxkg" path="res://assets/frankenstein_clear.PNG" id="2_da6do"]
-[ext_resource type="Texture2D" uid="uid://48vesx2e61yk" path="res://assets/pressed_jack_o_lantern.png" id="2_yaie6"]
-[ext_resource type="Texture2D" uid="uid://b0wl7ajut3k06" path="res://assets/jack_o_lantern_clear.PNG" id="3_3fedq"]
-[ext_resource type="Texture2D" uid="uid://eud7ny25dvyy" path="res://assets/hover_jack_o_lantern.png" id="3_816bp"]
-[ext_resource type="Texture2D" uid="uid://s1601e3ec31d" path="res://assets/disable_jack_o_lantern.png" id="4_da6do"]
-[ext_resource type="Texture2D" uid="uid://cur1hjdhnbvhk" path="res://assets/pressed_skull.png" id="6_0u167"]
-[ext_resource type="Texture2D" uid="uid://cb5ak20q5dw3g" path="res://assets/skull_clear.PNG" id="7_0u167"]
-[ext_resource type="Texture2D" uid="uid://cdnd1qponnt8o" path="res://assets/hover_skull.png" id="7_w75v7"]
-[ext_resource type="Texture2D" uid="uid://cagp32khfe48k" path="res://assets/disable_skull.png" id="8_yqv0e"]
-[ext_resource type="Texture2D" uid="uid://c03owfss2wr4r" path="res://assets/pressed_cat.png" id="10_1ugys"]
-[ext_resource type="Texture2D" uid="uid://bsit0p315dini" path="res://assets/hover_cat.png" id="11_ecl03"]
-[ext_resource type="Texture2D" uid="uid://b8iknog4fgty5" path="res://assets/cat_clear.PNG" id="11_w75v7"]
-[ext_resource type="Texture2D" uid="uid://dyl462wwpwn3s" path="res://assets/disable_cat.png" id="12_5k1me"]
-[ext_resource type="Texture2D" uid="uid://dkbg42lcuy1n3" path="res://assets/pressed_spider.png" id="14_kguks"]
-[ext_resource type="Texture2D" uid="uid://btrvbdauywos2" path="res://assets/hover_spider.png" id="15_ajr6o"]
-[ext_resource type="Texture2D" uid="uid://br3uj87mopa6e" path="res://assets/spider_clear.PNG" id="15_yqv0e"]
-[ext_resource type="Texture2D" uid="uid://d5qx0ybfrrw0" path="res://assets/disable_spider.png" id="16_iemgo"]
-[ext_resource type="Texture2D" uid="uid://c70d16ed05x07" path="res://assets/pressed_caldron.png" id="18_l761r"]
-[ext_resource type="Texture2D" uid="uid://crmqj6g2qy05h" path="res://assets/hover_caldron.png" id="19_ouf2d"]
-[ext_resource type="Texture2D" uid="uid://0r7h0lk8g1mb" path="res://assets/caldron_clear.PNG" id="19_u2i3j"]
-[ext_resource type="Texture2D" uid="uid://coktpkiu47dj7" path="res://assets/disable_caldron.png" id="20_uwewa"]
-[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/spider_drag.tscn" id="24_3fedq"]
-[ext_resource type="Script" uid="uid://dgukceo5r6uef" path="res://scenes/caldron_drag.gd" id="25_0u167"]
+[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/caldron_drag.tscn" id="6_v1wun"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3fedq"]
 texture = ExtResource("1_816bp")
@@ -65,11 +44,10 @@ shadow_offset = Vector2(0, 3.5)
 script = ExtResource("1_da6do")
 
 [node name="table" type="Panel" parent="."]
-visible = false
-offset_left = 3.0
-offset_top = -8.0
-offset_right = 1176.0
-offset_bottom = 660.0
+offset_left = -14.0
+offset_top = -9.0
+offset_right = 1159.0
+offset_bottom = 659.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_3fedq")
 
 [node name="frankenstein" type="Panel" parent="."]
@@ -85,7 +63,6 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0u167")
 
 [node name="back_Button" type="Button" parent="."]
-visible = false
 offset_left = 27.0
 offset_top = 31.0
 offset_right = 96.0
@@ -103,68 +80,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_w75v7")
 text = "Back
 "
 
-[node name="jack_sticker_Button" type="TextureButton" parent="."]
-visible = false
-offset_left = 1046.0
-offset_top = 393.0
-offset_right = 1121.0
-offset_bottom = 476.0
-texture_normal = ExtResource("3_3fedq")
-texture_pressed = ExtResource("2_yaie6")
-texture_hover = ExtResource("3_816bp")
-texture_disabled = ExtResource("4_da6do")
-
-[node name="skull_sticker_Button" type="TextureButton" parent="."]
-visible = false
-offset_left = 1044.0
-offset_top = 503.0
-offset_right = 1119.0
-offset_bottom = 575.0
-texture_normal = ExtResource("7_0u167")
-texture_pressed = ExtResource("6_0u167")
-texture_hover = ExtResource("7_w75v7")
-texture_disabled = ExtResource("8_yqv0e")
-
-[node name="cat_sticker_Button" type="TextureButton" parent="."]
-visible = false
-offset_left = 1042.0
-offset_top = 268.0
-offset_right = 1116.0
-offset_bottom = 370.0
-texture_normal = ExtResource("11_w75v7")
-texture_pressed = ExtResource("10_1ugys")
-texture_hover = ExtResource("11_ecl03")
-texture_disabled = ExtResource("12_5k1me")
-
-[node name="spider_sticker_Button" type="TextureButton" parent="."]
-visible = false
-offset_left = 1040.0
-offset_top = 97.0
-offset_right = 1115.0
-offset_bottom = 153.0
-texture_normal = ExtResource("15_yqv0e")
-texture_pressed = ExtResource("14_kguks")
-texture_hover = ExtResource("15_ajr6o")
-texture_disabled = ExtResource("16_iemgo")
-
-[node name="cauldron_Button" type="TextureButton" parent="."]
-visible = false
-offset_left = 1040.0
-offset_top = 171.0
-offset_right = 1117.0
-offset_bottom = 236.0
-texture_normal = ExtResource("19_u2i3j")
-texture_pressed = ExtResource("18_l761r")
-texture_hover = ExtResource("19_ouf2d")
-texture_disabled = ExtResource("20_uwewa")
-
-[node name="spider" parent="." instance=ExtResource("24_3fedq")]
-position = Vector2(-442, -124)
-script = ExtResource("25_0u167")
+[node name="caldron_drag" parent="." instance=ExtResource("6_v1wun")]
+position = Vector2(48, 233)
 
 [connection signal="pressed" from="back_Button" to="." method="_on_back_fran_button_pressed"]
-[connection signal="pressed" from="jack_sticker_Button" to="." method="_on_jack_sticker_button_pressed"]
-[connection signal="pressed" from="skull_sticker_Button" to="." method="_on_skull_sticker_button_pressed"]
-[connection signal="pressed" from="cat_sticker_Button" to="." method="_on_cat_sticker_button_pressed"]
-[connection signal="pressed" from="spider_sticker_Button" to="." method="_on_spider_sticker_button_pressed"]
-[connection signal="pressed" from="cauldron_Button" to="." method="_on_cauldron_button_pressed"]
