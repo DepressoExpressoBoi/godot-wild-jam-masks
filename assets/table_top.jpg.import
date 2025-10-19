@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6mb7ir1qcjqa"
-path="res://.godot/imported/spooder_stickers.png-1a624c661691654103316469cd1877e8.ctex"
+uid="uid://fdoly7731uak"
+path="res://.godot/imported/table_top.jpg-72f7c3b24655cd24baeb8faa2ce507ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spooder_stickers.png"
-dest_files=["res://.godot/imported/spooder_stickers.png-1a624c661691654103316469cd1877e8.ctex"]
+source_file="res://assets/table_top.jpg"
+dest_files=["res://.godot/imported/table_top.jpg-72f7c3b24655cd24baeb8faa2ce507ef.ctex"]
 
 [params]
 

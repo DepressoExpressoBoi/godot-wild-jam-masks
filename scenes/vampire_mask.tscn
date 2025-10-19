@@ -1,0 +1,74 @@
+[gd_scene load_steps=21 format=3 uid="uid://cc088gvpycubr"]
+
+[ext_resource type="Texture2D" uid="uid://jeebggr8quhs" path="res://assets/jack_o_lantern_sticker.png" id="1_8o1im"]
+[ext_resource type="Texture2D" uid="uid://48vesx2e61yk" path="res://assets/pressed_jack_o_lantern.png" id="2_2dk7k"]
+[ext_resource type="Texture2D" uid="uid://eud7ny25dvyy" path="res://assets/hover_jack_o_lantern.png" id="3_kicrw"]
+[ext_resource type="Texture2D" uid="uid://s1601e3ec31d" path="res://assets/disable_jack_o_lantern.png" id="4_1s0x6"]
+[ext_resource type="Texture2D" uid="uid://dt11owujef020" path="res://assets/skull_halloween_sticker.png" id="5_k7vlo"]
+[ext_resource type="Texture2D" uid="uid://cur1hjdhnbvhk" path="res://assets/pressed_skull.png" id="6_3ohvg"]
+[ext_resource type="Texture2D" uid="uid://cdnd1qponnt8o" path="res://assets/hover_skull.png" id="7_xktqf"]
+[ext_resource type="Texture2D" uid="uid://cagp32khfe48k" path="res://assets/disable_skull.png" id="8_80xy1"]
+[ext_resource type="Texture2D" uid="uid://dmh6sp1bybgn5" path="res://assets/cat_halloween_sticker.png" id="9_qyo5v"]
+[ext_resource type="Texture2D" uid="uid://c03owfss2wr4r" path="res://assets/pressed_cat.png" id="10_8t6qu"]
+[ext_resource type="Texture2D" uid="uid://bsit0p315dini" path="res://assets/hover_cat.png" id="11_psjpe"]
+[ext_resource type="Texture2D" uid="uid://dyl462wwpwn3s" path="res://assets/disable_cat.png" id="12_tpspb"]
+[ext_resource type="Texture2D" uid="uid://uex3f1twght6" path="res://assets/spider_halloween_sticker.png" id="13_kwmgc"]
+[ext_resource type="Texture2D" uid="uid://dkbg42lcuy1n3" path="res://assets/pressed_spider.png" id="14_1mdp6"]
+[ext_resource type="Texture2D" uid="uid://btrvbdauywos2" path="res://assets/hover_spider.png" id="15_et50d"]
+[ext_resource type="Texture2D" uid="uid://d5qx0ybfrrw0" path="res://assets/disable_spider.png" id="16_8s5p6"]
+[ext_resource type="Texture2D" uid="uid://dsxwe3ear66nw" path="res://assets/caldron_two_sticker.png" id="17_jvecm"]
+[ext_resource type="Texture2D" uid="uid://c70d16ed05x07" path="res://assets/pressed_caldron.png" id="18_fudgg"]
+[ext_resource type="Texture2D" uid="uid://crmqj6g2qy05h" path="res://assets/hover_caldron.png" id="19_bkjlt"]
+[ext_resource type="Texture2D" uid="uid://coktpkiu47dj7" path="res://assets/disable_caldron.png" id="20_4dytm"]
+
+[node name="vampire_mask" type="Node2D"]
+
+[node name="jack_sticker_Button" type="TextureButton" parent="."]
+offset_left = 602.0
+offset_top = 541.0
+offset_right = 677.0
+offset_bottom = 624.0
+texture_normal = ExtResource("1_8o1im")
+texture_pressed = ExtResource("2_2dk7k")
+texture_hover = ExtResource("3_kicrw")
+texture_disabled = ExtResource("4_1s0x6")
+
+[node name="skull_sticker_Button" type="TextureButton" parent="."]
+offset_left = 701.0
+offset_top = 555.0
+offset_right = 776.0
+offset_bottom = 627.0
+texture_normal = ExtResource("5_k7vlo")
+texture_pressed = ExtResource("6_3ohvg")
+texture_hover = ExtResource("7_xktqf")
+texture_disabled = ExtResource("8_80xy1")
+
+[node name="cat_sticker_Button" type="TextureButton" parent="."]
+offset_left = 500.0
+offset_top = 530.0
+offset_right = 574.0
+offset_bottom = 632.0
+texture_normal = ExtResource("9_qyo5v")
+texture_pressed = ExtResource("10_8t6qu")
+texture_hover = ExtResource("11_psjpe")
+texture_disabled = ExtResource("12_tpspb")
+
+[node name="spider_sticker_Button" type="TextureButton" parent="."]
+offset_left = 300.0
+offset_top = 554.0
+offset_right = 375.0
+offset_bottom = 611.0
+texture_normal = ExtResource("13_kwmgc")
+texture_pressed = ExtResource("14_1mdp6")
+texture_hover = ExtResource("15_et50d")
+texture_disabled = ExtResource("16_8s5p6")
+
+[node name="cauldron_Button" type="TextureButton" parent="."]
+offset_left = 393.0
+offset_top = 549.0
+offset_right = 470.0
+offset_bottom = 614.0
+texture_normal = ExtResource("17_jvecm")
+texture_pressed = ExtResource("18_fudgg")
+texture_hover = ExtResource("19_bkjlt")
+texture_disabled = ExtResource("20_4dytm")
