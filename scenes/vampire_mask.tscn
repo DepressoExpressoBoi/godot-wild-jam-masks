@@ -1,28 +1,14 @@
-[gd_scene load_steps=30 format=3 uid="uid://cc088gvpycubr"]
+[gd_scene load_steps=16 format=3 uid="uid://cc088gvpycubr"]
 
 [ext_resource type="Script" uid="uid://dwu38dnjwdsp6" path="res://scenes/vampire_mask.gd" id="1_1s0x6"]
 [ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="1_kicrw"]
-[ext_resource type="Texture2D" uid="uid://48vesx2e61yk" path="res://assets/pressed_jack_o_lantern.png" id="2_2dk7k"]
 [ext_resource type="Texture2D" uid="uid://cxh0dp5lt68y4" path="res://assets/vampire_clear.PNG" id="2_kicrw"]
-[ext_resource type="Texture2D" uid="uid://b0wl7ajut3k06" path="res://assets/jack_o_lantern_clear.PNG" id="3_1s0x6"]
-[ext_resource type="Texture2D" uid="uid://eud7ny25dvyy" path="res://assets/hover_jack_o_lantern.png" id="3_kicrw"]
-[ext_resource type="Texture2D" uid="uid://s1601e3ec31d" path="res://assets/disable_jack_o_lantern.png" id="4_1s0x6"]
-[ext_resource type="Texture2D" uid="uid://cur1hjdhnbvhk" path="res://assets/pressed_skull.png" id="6_3ohvg"]
-[ext_resource type="Texture2D" uid="uid://cb5ak20q5dw3g" path="res://assets/skull_clear.PNG" id="7_k7vlo"]
-[ext_resource type="Texture2D" uid="uid://cdnd1qponnt8o" path="res://assets/hover_skull.png" id="7_xktqf"]
-[ext_resource type="Texture2D" uid="uid://cagp32khfe48k" path="res://assets/disable_skull.png" id="8_80xy1"]
-[ext_resource type="Texture2D" uid="uid://c03owfss2wr4r" path="res://assets/pressed_cat.png" id="10_8t6qu"]
-[ext_resource type="Texture2D" uid="uid://b8iknog4fgty5" path="res://assets/cat_clear.PNG" id="11_3ohvg"]
-[ext_resource type="Texture2D" uid="uid://bsit0p315dini" path="res://assets/hover_cat.png" id="11_psjpe"]
-[ext_resource type="Texture2D" uid="uid://dyl462wwpwn3s" path="res://assets/disable_cat.png" id="12_tpspb"]
-[ext_resource type="Texture2D" uid="uid://dkbg42lcuy1n3" path="res://assets/pressed_spider.png" id="14_1mdp6"]
-[ext_resource type="Texture2D" uid="uid://btrvbdauywos2" path="res://assets/hover_spider.png" id="15_et50d"]
-[ext_resource type="Texture2D" uid="uid://br3uj87mopa6e" path="res://assets/spider_clear.PNG" id="15_xktqf"]
-[ext_resource type="Texture2D" uid="uid://d5qx0ybfrrw0" path="res://assets/disable_spider.png" id="16_8s5p6"]
-[ext_resource type="Texture2D" uid="uid://c70d16ed05x07" path="res://assets/pressed_caldron.png" id="18_fudgg"]
-[ext_resource type="Texture2D" uid="uid://0r7h0lk8g1mb" path="res://assets/caldron_clear.PNG" id="19_80xy1"]
-[ext_resource type="Texture2D" uid="uid://crmqj6g2qy05h" path="res://assets/hover_caldron.png" id="19_bkjlt"]
-[ext_resource type="Texture2D" uid="uid://coktpkiu47dj7" path="res://assets/disable_caldron.png" id="20_4dytm"]
+[ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/cat_drag.tscn" id="4_gxlsr"]
+[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/caldron_drag.tscn" id="5_3qns0"]
+[ext_resource type="PackedScene" uid="uid://sfjst1e38b48" path="res://scenes/skull_drag.tscn" id="6_64rg4"]
+[ext_resource type="Script" uid="uid://dgukceo5r6uef" path="res://scenes/caldron_drag.gd" id="7_hfnn7"]
+[ext_resource type="PackedScene" uid="uid://c7130qtbbsnbo" path="res://scenes/jack_o_lantern_drag.tscn" id="8_cug0l"]
+[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/spider_drag.tscn" id="9_aaw3u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7vlo"]
 texture = ExtResource("1_kicrw")
@@ -63,6 +49,7 @@ shadow_offset = Vector2(0, 3.5)
 script = ExtResource("1_1s0x6")
 
 [node name="table" type="Panel" parent="."]
+visible = false
 offset_left = -8.0
 offset_top = -9.0
 offset_right = 1165.0
@@ -81,11 +68,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_1s0x6")
 
-[node name="back_Button" type="Button" parent="vampire"]
-layout_mode = 0
-offset_left = -241.0
-offset_right = -172.0
-offset_bottom = 42.0
+[node name="back_Button" type="Button" parent="."]
+offset_left = 50.0
+offset_top = 28.0
+offset_right = 138.0
+offset_bottom = 70.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
@@ -99,59 +86,39 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_xktqf")
 text = "Back
 "
 
-[node name="jack_sticker_Button" type="TextureButton" parent="."]
-offset_left = 1045.0
-offset_top = 393.0
+[node name="next_Button" type="Button" parent="."]
+offset_left = 1032.0
+offset_top = 573.0
 offset_right = 1120.0
-offset_bottom = 476.0
-texture_normal = ExtResource("3_1s0x6")
-texture_pressed = ExtResource("2_2dk7k")
-texture_hover = ExtResource("3_kicrw")
-texture_disabled = ExtResource("4_1s0x6")
+offset_bottom = 615.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_1s0x6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k7vlo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3ohvg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xktqf")
+text = "Next
+"
 
-[node name="skull_sticker_Button" type="TextureButton" parent="."]
-offset_left = 1044.0
-offset_top = 503.0
-offset_right = 1119.0
-offset_bottom = 575.0
-texture_normal = ExtResource("7_k7vlo")
-texture_pressed = ExtResource("6_3ohvg")
-texture_hover = ExtResource("7_xktqf")
-texture_disabled = ExtResource("8_80xy1")
+[node name="cat_drag" parent="." instance=ExtResource("4_gxlsr")]
+position = Vector2(613, -145)
 
-[node name="cat_sticker_Button" type="TextureButton" parent="."]
-offset_left = 1042.0
-offset_top = 268.0
-offset_right = 1116.0
-offset_bottom = 370.0
-texture_normal = ExtResource("11_3ohvg")
-texture_pressed = ExtResource("10_8t6qu")
-texture_hover = ExtResource("11_psjpe")
-texture_disabled = ExtResource("12_tpspb")
+[node name="spider_drag" parent="." instance=ExtResource("9_aaw3u")]
+position = Vector2(552, -70)
 
-[node name="spider_sticker_Button" type="TextureButton" parent="."]
-offset_left = 1040.0
-offset_top = 97.0
-offset_right = 1115.0
-offset_bottom = 153.0
-texture_normal = ExtResource("15_xktqf")
-texture_pressed = ExtResource("14_1mdp6")
-texture_hover = ExtResource("15_et50d")
-texture_disabled = ExtResource("16_8s5p6")
+[node name="caldron_drag" parent="." instance=ExtResource("5_3qns0")]
+position = Vector2(550, -26)
 
-[node name="cauldron_Button" type="TextureButton" parent="."]
-offset_left = 1040.0
-offset_top = 171.0
-offset_right = 1117.0
-offset_bottom = 236.0
-texture_normal = ExtResource("19_80xy1")
-texture_pressed = ExtResource("18_fudgg")
-texture_hover = ExtResource("19_bkjlt")
-texture_disabled = ExtResource("20_4dytm")
+[node name="jack_drag" parent="." instance=ExtResource("8_cug0l")]
+position = Vector2(592, 177)
 
-[connection signal="pressed" from="vampire/back_Button" to="." method="_on_back_vampire_button_pressed"]
-[connection signal="pressed" from="jack_sticker_Button" to="." method="_on_jack_sticker_button_pressed"]
-[connection signal="pressed" from="skull_sticker_Button" to="." method="_on_skull_sticker_button_pressed"]
-[connection signal="pressed" from="cat_sticker_Button" to="." method="_on_cat_sticker_button_pressed"]
-[connection signal="pressed" from="spider_sticker_Button" to="." method="_on_spider_sticker_button_pressed"]
-[connection signal="pressed" from="cauldron_Button" to="." method="_on_cauldron_button_pressed"]
+[node name="skull_drag" parent="." instance=ExtResource("6_64rg4")]
+position = Vector2(612, 251)
+script = ExtResource("7_hfnn7")
+
+[connection signal="pressed" from="back_Button" to="." method="_on_back_vampire_button_pressed"]
+[connection signal="pressed" from="next_Button" to="." method="_on_next_button_pressed"]
