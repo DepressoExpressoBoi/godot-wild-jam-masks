@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhvgtrkb5bpxg"]
+
+[ext_resource type="Script" uid="uid://cyog0u6co6yhw" path="res://scripts/houses_scripts/licorice_baddie.gd" id="1_045hx"]
+[ext_resource type="Texture2D" uid="uid://d2jn6g2jmcp2t" path="res://assets/licorice-baddie.png" id="1_miujr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_045hx"]
+radius = 53.900635
+height = 192.09395
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_045hx"]
+radius = 179.44637
+
+[node name="Licorice-Baddie" type="CharacterBody2D"]
+script = ExtResource("1_045hx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_miujr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_045hx")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, 19)
+shape = SubResource("CircleShape2D_045hx")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
