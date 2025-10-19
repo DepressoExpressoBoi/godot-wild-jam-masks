@@ -11,6 +11,11 @@ func _physics_process(_delta):
 		
 		direction = direction.normalized()
 		
+		print(direction)
+		
+		if direction.x > 0.95 or direction.x < -0.95 or direction.y > 0.95 or direction.y < -0.95:
+			position =  player.position - Vector2(200, 200)
+		
 		velocity = direction * speed
 
 		move_and_slide()
