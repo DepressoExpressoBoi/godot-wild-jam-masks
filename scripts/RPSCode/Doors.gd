@@ -4,7 +4,6 @@ extends Panel
 	
 func _ready():
 	retry()
-	print(get_tree())
 
 func closeDoor():
 	$"3Hands".visible = false

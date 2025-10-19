@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://8x05u8pfs2ax"]
+[gd_scene load_steps=18 format=3 uid="uid://8x05u8pfs2ax"]
 
 [ext_resource type="PackedScene" uid="uid://lulwk5mtevqn" path="res://scenes/RPSScenes/Doors.tscn" id="1_3fxu7"]
 [ext_resource type="Texture2D" uid="uid://lkpu4ukady7n" path="res://assets/RPSSprites/FruitRollUp/FruitRollUp.png" id="2_jqhtl"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ogl27rj7ylx" path="res://assets/RPSSprites/FruitRollUp/disabled.png" id="5_7cw88"]
 [ext_resource type="Texture2D" uid="uid://c5su5k145lad0" path="res://assets/RPSSprites/JawBreaker/JawBreaker.png" id="6_textl"]
 [ext_resource type="Texture2D" uid="uid://qomuy8o6ba75" path="res://assets/RPSSprites/JawBreaker/selected.png" id="7_ipu46"]
+[ext_resource type="PackedScene" uid="uid://ck1oid0dic3mf" path="res://scenes/trick_or_treating.tscn" id="8_2nd8q"]
 [ext_resource type="Texture2D" uid="uid://b3hd8bu7thi70" path="res://assets/RPSSprites/JawBreaker/hovered.png" id="8_m0ndh"]
 [ext_resource type="Texture2D" uid="uid://wsjnii3l3b04" path="res://assets/RPSSprites/JawBreaker/disabled.png" id="9_3fxu7"]
 [ext_resource type="Texture2D" uid="uid://c464ale6g7ie0" path="res://assets/RPSSprites/Scissors/Scissors.png" id="10_5x85t"]
@@ -48,6 +49,7 @@ offset_right = 527.0
 offset_bottom = 623.0
 scale = Vector2(2, 2)
 script = ExtResource("14_ipu46")
+tot = ExtResource("8_2nd8q")
 
 [node name="FruitRollUp" type="TextureButton" parent="."]
 texture_filter = 1
