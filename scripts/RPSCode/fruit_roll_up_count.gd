@@ -27,7 +27,6 @@ func _on_fruit_roll_up_pressed() -> void:
 	
 	if result == "won":
 		won_label.visible = true
-<<<<<<< Updated upstream
 		await get_tree().create_timer(1).timeout 
 		won_label.visible = false 
 		await get_tree().change_scene_to_file("res://scenes/trick_or_treating.tscn")
@@ -36,14 +35,6 @@ func _on_fruit_roll_up_pressed() -> void:
 		await get_tree().create_timer(1).timeout 
 		lost_label.visible = false
 		await get_tree().change_scene_to_file("res://scenes/trick_or_treating.tscn")
-=======
-		get_tree().change_scene_to_file("res://scenes/trick_or_treating.tscn")
-		#get_tree().change_scene_to_packed(tot)
-	elif result == "lost":
-		lost_label.visible = true
-		get_tree().change_scene_to_file("res://scenes/trick_or_treating.tscn")
-		#get_tree().change_scene_to_packed(tot)
->>>>>>> Stashed changes
 	elif result == "tie":
 		tie_label.visible = true 
 		await get_tree().create_timer(2).timeout 
