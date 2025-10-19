@@ -7,6 +7,5 @@ func _process(delta):
 	
 
 func _on_jaw_breaker_pressed() -> void:
-	JawBreakerCounter.JBCounter -= 1
 	PlayRps.hands = 0
 	PlayRps.play()

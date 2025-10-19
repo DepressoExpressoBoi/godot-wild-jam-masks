@@ -1,7 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://8x05u8pfs2ax"]
 
 [ext_resource type="Texture2D" uid="uid://bk3aw1ljkqk1f" path="res://assets/BackgroundImages/door.jpg" id="1_pxa8e"]
-[ext_resource type="Script" uid="uid://c5nmpf8dcapq" path="res://scenes/texture_rect.gd" id="2_5x85t"]
 [ext_resource type="Texture2D" uid="uid://lkpu4ukady7n" path="res://assets/RPSSprites/FruitRollUp/FruitRollUp.png" id="2_jqhtl"]
 [ext_resource type="Texture2D" uid="uid://c1awqk4tfjbs0" path="res://assets/RPSSprites/FruitRollUp/selected.png" id="3_0mspb"]
 [ext_resource type="Texture2D" uid="uid://cmv6y11cmw2ib" path="res://assets/RPSSprites/FruitRollUp/hovered.png" id="4_jnumi"]
@@ -18,6 +17,47 @@
 [ext_resource type="Script" uid="uid://csqnqvmwdmc2t" path="res://scenes/jaw_breaker_count.gd" id="15_m0ndh"]
 [ext_resource type="Script" uid="uid://bg1u2pxy0h2wd" path="res://scenes/scissors_count.gd" id="16_3fxu7"]
 
+[sub_resource type="GDScript" id="GDScript_3fxu7"]
+script/source = "extends TextureRect
+
+var hands = 0
+var compChoice = 0
+
+func _ready():
+	compChoice = randi_range(0, 2)
+	
+
+func play():
+	if hands == 0 and compChoice == 0:
+		tryAgain()
+	elif hands == 0 and compChoice == 1:
+		lost()
+	elif hands == 0 and compChoice == 2:
+		won()
+	elif hands == 1 and compChoice == 0:
+		won()
+	elif hands == 1 and compChoice == 1:
+		tryAgain()
+	elif hands == 1 and compChoice == 2:
+		lost()
+	elif hands == 2 and compChoice == 0:
+		lost()
+	elif hands == 2 and compChoice == 1:
+		won()
+	elif hands == 2 and compChoice == 2:
+		tryAgain()
+		
+func tryAgain():
+	print(\"Try Again\")
+	
+func won():
+	print(\"Winner\")
+	
+func lost():
+	print(\"Loser\")
+	
+"
+
 [sub_resource type="FontVariation" id="FontVariation_m0ndh"]
 
 [sub_resource type="FontVariation" id="FontVariation_3fxu7"]
@@ -33,13 +73,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_pxa8e")
-script = ExtResource("2_5x85t")
+script = SubResource("GDScript_3fxu7")
 
 [node name="FruitRollUpCount" type="Label" parent="."]
-offset_left = 538.0
-offset_top = 593.0
-offset_right = 617.0
-offset_bottom = 631.0
+offset_left = 549.0
+offset_top = 597.0
+offset_right = 595.0
+offset_bottom = 620.0
 theme_override_fonts/font = SubResource("FontVariation_3fxu7")
 script = ExtResource("14_ipu46")
 
@@ -51,10 +91,10 @@ offset_bottom = 619.0
 script = ExtResource("15_m0ndh")
 
 [node name="ScissorsCount" type="Label" parent="."]
-offset_left = 701.0
-offset_top = 608.0
-offset_right = 741.0
-offset_bottom = 631.0
+offset_left = 700.0
+offset_top = 598.0
+offset_right = 740.0
+offset_bottom = 621.0
 script = ExtResource("16_3fxu7")
 
 [node name="JawBreaker" type="TextureButton" parent="."]
@@ -72,9 +112,9 @@ texture_disabled = ExtResource("9_3fxu7")
 [node name="FruitRollUp" type="TextureButton" parent="."]
 texture_filter = 1
 offset_left = 513.0
-offset_top = 464.99997
+offset_top = 461.99997
 offset_right = 1153.0
-offset_bottom = 1105.0
+offset_bottom = 1102.0
 scale = Vector2(0.2, 0.2)
 size_flags_vertical = 8
 texture_normal = ExtResource("2_jqhtl")
@@ -86,9 +126,9 @@ stretch_mode = 3
 [node name="Scissors" type="TextureButton" parent="."]
 texture_filter = 1
 offset_left = 659.0
-offset_top = 465.99997
+offset_top = 456.99997
 offset_right = 1299.0
-offset_bottom = 1106.0
+offset_bottom = 1097.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("10_5x85t")
 texture_pressed = ExtResource("11_rqdq0")

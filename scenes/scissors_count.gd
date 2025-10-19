@@ -6,6 +6,5 @@ func _process(delta):
 		$"../Scissors".disabled = true
 
 func _on_scissors_pressed() -> void:
-	ScissorsCounter.SCounter -= 1
 	PlayRps.hands = 2
 	PlayRps.play()

@@ -6,6 +6,5 @@ func _process(delta):
 		$"../FruitRollUp".disabled = true 
 
 func _on_fruit_roll_up_pressed() -> void:
-	FruitRollUpCounter.FRUCount -= 1
 	PlayRps.hands = 1
 	PlayRps.play()
