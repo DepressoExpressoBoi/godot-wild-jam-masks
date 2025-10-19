@@ -7,4 +7,6 @@ func _process(delta):
 
 func _on_fruit_roll_up_pressed() -> void:
 	PlayRps.hands = 1
+	Doors.closeDoor()
+	Doors.compChoiceDoor()
 	PlayRps.play()

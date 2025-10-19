@@ -8,4 +8,6 @@ func _process(delta):
 
 func _on_jaw_breaker_pressed() -> void:
 	PlayRps.hands = 0
+	Doors.closeDoor()
+	Doors.compChoiceDoor()
 	PlayRps.play()

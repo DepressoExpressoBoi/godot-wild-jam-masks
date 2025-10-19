@@ -7,4 +7,6 @@ func _process(delta):
 
 func _on_scissors_pressed() -> void:
 	PlayRps.hands = 2
+	Doors.closeDoor()
+	Doors.compChoiceDoor()
 	PlayRps.play()

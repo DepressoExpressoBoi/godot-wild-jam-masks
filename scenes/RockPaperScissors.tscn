@@ -1,17 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://8x05u8pfs2ax"]
+[gd_scene load_steps=17 format=3 uid="uid://8x05u8pfs2ax"]
 
-[ext_resource type="Script" uid="uid://d1wsph82bs2oj" path="res://scenes/doors.gd" id="1_g4og7"]
+[ext_resource type="PackedScene" uid="uid://lulwk5mtevqn" path="res://scenes/Doors.tscn" id="1_3fxu7"]
 [ext_resource type="Texture2D" uid="uid://lkpu4ukady7n" path="res://assets/RPSSprites/FruitRollUp/FruitRollUp.png" id="2_jqhtl"]
-[ext_resource type="Texture2D" uid="uid://pg3i47jb7cww" path="res://assets/RPSSprites/Doors/closed.png" id="2_ycgj2"]
 [ext_resource type="Texture2D" uid="uid://c1awqk4tfjbs0" path="res://assets/RPSSprites/FruitRollUp/selected.png" id="3_0mspb"]
-[ext_resource type="Texture2D" uid="uid://cjepjmroichcy" path="res://assets/RPSSprites/Doors/open.png" id="3_juae1"]
 [ext_resource type="Texture2D" uid="uid://cmv6y11cmw2ib" path="res://assets/RPSSprites/FruitRollUp/hovered.png" id="4_jnumi"]
-[ext_resource type="Texture2D" uid="uid://c6gsx8y8u2d1x" path="res://assets/RPSSprites/Doors/3hands.png" id="4_uygni"]
 [ext_resource type="Texture2D" uid="uid://c4ogl27rj7ylx" path="res://assets/RPSSprites/FruitRollUp/disabled.png" id="5_7cw88"]
-[ext_resource type="Texture2D" uid="uid://dugixc7r66i5e" path="res://assets/RPSSprites/Doors/rock.png" id="5_xoaiu"]
-[ext_resource type="Texture2D" uid="uid://dw1flaum5m1nl" path="res://assets/RPSSprites/Doors/paper.png" id="6_nhi56"]
 [ext_resource type="Texture2D" uid="uid://c5su5k145lad0" path="res://assets/RPSSprites/JawBreaker/JawBreaker.png" id="6_textl"]
-[ext_resource type="Texture2D" uid="uid://chv4vg0k6cbsg" path="res://assets/RPSSprites/Doors/scissors.png" id="7_2aaop"]
 [ext_resource type="Texture2D" uid="uid://qomuy8o6ba75" path="res://assets/RPSSprites/JawBreaker/selected.png" id="7_ipu46"]
 [ext_resource type="Texture2D" uid="uid://b3hd8bu7thi70" path="res://assets/RPSSprites/JawBreaker/hovered.png" id="8_m0ndh"]
 [ext_resource type="Texture2D" uid="uid://wsjnii3l3b04" path="res://assets/RPSSprites/JawBreaker/disabled.png" id="9_3fxu7"]
@@ -25,95 +19,7 @@
 
 [node name="Node" type="Node"]
 
-[node name="Doors" type="Panel" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_g4og7")
-
-[node name="Closed" type="TextureRect" parent="Doors"]
-visible = false
-texture_filter = 1
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.506)
-texture = ExtResource("2_ycgj2")
-expand_mode = 1
-stretch_mode = 2
-
-[node name="Open" type="TextureRect" parent="Doors"]
-texture_filter = 1
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 3.0517578e-05
-offset_right = 128.0
-offset_bottom = 632.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.506)
-texture = ExtResource("3_juae1")
-
-[node name="3Hands" type="TextureRect" parent="Doors"]
-visible = false
-texture_filter = 1
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 3.0517578e-05
-offset_right = 128.0
-offset_bottom = 632.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.506)
-texture = ExtResource("4_uygni")
-
-[node name="Rock" type="TextureRect" parent="Doors"]
-visible = false
-texture_filter = 1
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 3.0517578e-05
-offset_right = 128.0
-offset_bottom = 632.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.506)
-texture = ExtResource("5_xoaiu")
-
-[node name="Paper" type="TextureRect" parent="Doors"]
-visible = false
-texture_filter = 1
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 3.0517578e-05
-offset_right = 128.0
-offset_bottom = 632.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.506)
-texture = ExtResource("6_nhi56")
-
-[node name="Scissors2" type="TextureRect" parent="Doors"]
-visible = false
-texture_filter = 1
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 3.0517578e-05
-offset_right = 128.0
-offset_bottom = 632.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.506)
-texture = ExtResource("7_2aaop")
+[node name="Doors" parent="." instance=ExtResource("1_3fxu7")]
 
 [node name="JawBreakerCount" type="Label" parent="."]
 offset_left = 320.0

@@ -21,6 +21,7 @@ FruitRollUpCounter="*res://FruitRollUpCounter.gd"
 JawBreakerCounter="*res://JawBreakerCounter.gd"
 ScissorsCounter="*res://ScissorsCounter.gd"
 PlayRps="*res://PlayRPS.gd"
+Doors="*res://scenes/Doors.tscn"
 
 [display]
 
