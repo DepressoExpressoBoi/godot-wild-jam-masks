@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="1_816bp"]
 [ext_resource type="Script" uid="uid://53363v6q4co5" path="res://scenes/frankenstein_mask.gd" id="1_da6do"]
 [ext_resource type="Texture2D" uid="uid://d0u5n66c8xxkg" path="res://assets/frankenstein_clear.PNG" id="2_da6do"]
-[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/caldron_drag.tscn" id="6_v1wun"]
+[ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/cat_drag.tscn" id="4_skwkt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3fedq"]
 texture = ExtResource("1_816bp")
@@ -50,6 +50,9 @@ offset_right = 1159.0
 offset_bottom = 659.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_3fedq")
 
+[node name="cat" parent="." instance=ExtResource("4_skwkt")]
+position = Vector2(-337, 12)
+
 [node name="frankenstein" type="Panel" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -79,8 +82,5 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_0u167")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_w75v7")
 text = "Back
 "
-
-[node name="caldron_drag" parent="." instance=ExtResource("6_v1wun")]
-position = Vector2(151, 113)
 
 [connection signal="pressed" from="back_Button" to="." method="_on_back_fran_button_pressed"]
