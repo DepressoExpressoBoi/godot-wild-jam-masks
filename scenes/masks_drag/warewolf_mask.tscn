@@ -1,0 +1,122 @@
+[gd_scene load_steps=15 format=3 uid="uid://bo1gde57x0sdq"]
+
+[ext_resource type="Script" uid="uid://cy1a88ikixhfq" path="res://scripts/masks_code/warewolf_mask.gd" id="1_ivrf5"]
+[ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/mask_background_other/table_top_light.jpg" id="2_8olj0"]
+[ext_resource type="Texture2D" uid="uid://d218xd3lc0e78" path="res://assets/masks_assets_other/warewolf_clear.PNG" id="3_7tcg1"]
+[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/masks_drag/spider_drag.tscn" id="4_u72lo"]
+[ext_resource type="PackedScene" uid="uid://sfjst1e38b48" path="res://scenes/masks_drag/skull_drag.tscn" id="5_jc3hm"]
+[ext_resource type="PackedScene" uid="uid://c7130qtbbsnbo" path="res://scenes/stickers_dragging/jack_o_lantern_drag.tscn" id="6_lqufn"]
+[ext_resource type="PackedScene" uid="uid://cedf54hoymsdd" path="res://scenes/stickers_dragging/cat_drag.tscn" id="7_xgas0"]
+[ext_resource type="PackedScene" uid="uid://bdr2sm1jr64gg" path="res://scenes/stickers_dragging/caldron_drag.tscn" id="8_4j61j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_db7ex"]
+texture = ExtResource("2_8olj0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i724l"]
+texture = ExtResource("3_7tcg1")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1y63"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_db7ex"]
+bg_color = Color(0.51718444, 0.5171845, 0.51718444, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i724l"]
+bg_color = Color(0.74978, 0.74978, 0.74977994, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yu5yk"]
+
+[node name="warewolf_mask" type="Node2D"]
+script = ExtResource("1_ivrf5")
+
+[node name="table" type="Panel" parent="."]
+visible = false
+offset_left = -8.0
+offset_top = -9.0
+offset_right = 1165.0
+offset_bottom = 659.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_db7ex")
+
+[node name="warewolf" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 293.0
+offset_top = 29.0
+offset_right = 846.0
+offset_bottom = 580.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_i724l")
+
+[node name="back_Button" type="Button" parent="."]
+offset_left = 34.0
+offset_top = 35.0
+offset_right = 125.0
+offset_bottom = 77.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_d1y63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_db7ex")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i724l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yu5yk")
+text = "Back
+"
+
+[node name="next_Button" type="Button" parent="."]
+offset_left = 1019.0
+offset_top = 565.0
+offset_right = 1110.0
+offset_bottom = 607.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_d1y63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_db7ex")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i724l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yu5yk")
+text = "Next
+"
+
+[node name="spider_drag" parent="." instance=ExtResource("4_u72lo")]
+position = Vector2(543, -74)
+
+[node name="skull_drag" parent="." instance=ExtResource("5_jc3hm")]
+position = Vector2(596, 255)
+
+[node name="jack_drag" parent="." instance=ExtResource("6_lqufn")]
+position = Vector2(577, 183)
+
+[node name="cat_drag" parent="." instance=ExtResource("7_xgas0")]
+position = Vector2(599, -155)
+
+[node name="caldron_drag" parent="." instance=ExtResource("8_4j61j")]
+position = Vector2(537, -22)
+
+[connection signal="pressed" from="back_Button" to="." method="_on_back_warewolf_button_pressed"]
+[connection signal="pressed" from="next_Button" to="." method="_on_next_button_pressed"]

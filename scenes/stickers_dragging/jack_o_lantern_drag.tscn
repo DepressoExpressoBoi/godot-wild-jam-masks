@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7130qtbbsnbo"]
+
+[ext_resource type="Script" uid="uid://jayk4i0u0d5u" path="res://scripts/masks_code/jack_o_lantern_drag.gd" id="1_0mew5"]
+[ext_resource type="Texture2D" uid="uid://b0wl7ajut3k06" path="res://assets/stickers_assets/jack_o_lantern_clear.PNG" id="1_50r0y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0mew5"]
+size = Vector2(82, 82)
+
+[node name="jack_drag" type="Node2D"]
+script = ExtResource("1_0mew5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(492.5, 191.5)
+texture = ExtResource("1_50r0y")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(492.5, 191.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, 2)
+shape = SubResource("RectangleShape2D_0mew5")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

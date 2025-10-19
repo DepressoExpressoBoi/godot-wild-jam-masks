@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdr2sm1jr64gg"]
+
+[ext_resource type="Texture2D" uid="uid://0r7h0lk8g1mb" path="res://assets/stickers_assets/caldron_clear.PNG" id="1_61niq"]
+[ext_resource type="Script" uid="uid://dgukceo5r6uef" path="res://scripts/masks_code/caldron_drag.gd" id="1_qwrj7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwrj7"]
+size = Vector2(79.5, 72)
+
+[node name="caldron_drag" type="Node2D"]
+script = ExtResource("1_qwrj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(531, 298)
+texture = ExtResource("1_61niq")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(530, 301)
+shape = SubResource("RectangleShape2D_qwrj7")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
