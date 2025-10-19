@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dsa71x24wtm8o"]
+[gd_scene load_steps=32 format=3 uid="uid://dsa71x24wtm8o"]
 
 [ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="1_816bp"]
 [ext_resource type="Script" uid="uid://53363v6q4co5" path="res://scenes/frankenstein_mask.gd" id="1_da6do"]
@@ -23,15 +23,14 @@
 [ext_resource type="Texture2D" uid="uid://crmqj6g2qy05h" path="res://assets/hover_caldron.png" id="19_ouf2d"]
 [ext_resource type="Texture2D" uid="uid://0r7h0lk8g1mb" path="res://assets/caldron_clear.PNG" id="19_u2i3j"]
 [ext_resource type="Texture2D" uid="uid://coktpkiu47dj7" path="res://assets/disable_caldron.png" id="20_uwewa"]
+[ext_resource type="PackedScene" uid="uid://q2p0omuvx3n4" path="res://scenes/spider_drag.tscn" id="24_3fedq"]
+[ext_resource type="Script" uid="uid://dgukceo5r6uef" path="res://scenes/caldron_drag.gd" id="25_0u167"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3fedq"]
 texture = ExtResource("1_816bp")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0u167"]
 texture = ExtResource("2_da6do")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_da6do"]
-size = Vector2(504, 484)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_da6do"]
 bg_color = Color(1, 1, 1, 1)
@@ -62,21 +61,6 @@ shadow_offset = Vector2(0, 3.5)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w75v7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3fedq"]
-size = Vector2(76.5, 71)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0u167"]
-size = Vector2(75.5, 71.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w75v7"]
-size = Vector2(88, 80.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqv0e"]
-size = Vector2(75, 104)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2i3j"]
-size = Vector2(76, 72.5)
-
 [node name="frankenstein_mask" type="Node2D"]
 script = ExtResource("1_da6do")
 
@@ -89,7 +73,6 @@ offset_bottom = 660.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_3fedq")
 
 [node name="frankenstein" type="Panel" parent="."]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -100,18 +83,6 @@ offset_bottom = 585.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0u167")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(595.00006, 325)
-scale = Vector2(1.99, 1.9366666)
-texture = ExtResource("2_da6do")
-
-[node name="Area2D_frank" type="Area2D" parent="."]
-position = Vector2(293, 29)
-
-[node name="CollisionShape2D_frank" type="CollisionShape2D" parent="Area2D_frank"]
-position = Vector2(307, 297)
-shape = SubResource("RectangleShape2D_da6do")
 
 [node name="back_Button" type="Button" parent="."]
 visible = false
@@ -187,59 +158,9 @@ texture_pressed = ExtResource("18_l761r")
 texture_hover = ExtResource("19_ouf2d")
 texture_disabled = ExtResource("20_uwewa")
 
-[node name="spider_sprite_button" type="Sprite2D" parent="."]
-position = Vector2(80, 163)
-texture = ExtResource("15_yqv0e")
-
-[node name="Area2D_spider" type="Area2D" parent="."]
-
-[node name="CollisionShape2D_sdr" type="CollisionShape2D" parent="Area2D_spider"]
-position = Vector2(79.75, 157.5)
-shape = SubResource("RectangleShape2D_3fedq")
-
-[node name="skull_sprite_button" type="Sprite2D" parent="."]
-position = Vector2(77, 249)
-texture = ExtResource("7_0u167")
-
-[node name="Area2D_skull" type="Area2D" parent="."]
-position = Vector2(77, 249)
-
-[node name="CollisionShape2D_skull" type="CollisionShape2D" parent="Area2D_skull"]
-position = Vector2(1, 2)
-shape = SubResource("RectangleShape2D_0u167")
-
-[node name="jack_o_lantern_spirite" type="Sprite2D" parent="."]
-position = Vector2(79, 350)
-texture = ExtResource("3_3fedq")
-
-[node name="Area2d_jack" type="Area2D" parent="."]
-position = Vector2(79, 350)
-
-[node name="CollisionShape2D_jack" type="CollisionShape2D" parent="Area2d_jack"]
-position = Vector2(-2, 2.75)
-shape = SubResource("RectangleShape2D_w75v7")
-
-[node name="cat_sprite_button" type="Sprite2D" parent="."]
-position = Vector2(76, 461)
-texture = ExtResource("11_w75v7")
-
-[node name="Area2d_cat" type="Area2D" parent="."]
-position = Vector2(76, 461)
-
-[node name="CollisionShape2D_cat" type="CollisionShape2D" parent="Area2d_cat"]
-position = Vector2(-2, 0)
-shape = SubResource("RectangleShape2D_yqv0e")
-
-[node name="caldron_sprite_button" type="Sprite2D" parent="."]
-position = Vector2(73, 574)
-texture = ExtResource("19_u2i3j")
-
-[node name="Area2D_caldron" type="Area2D" parent="."]
-position = Vector2(73, 574)
-
-[node name="CollisionShape2D_cdrn" type="CollisionShape2D" parent="Area2D_caldron"]
-position = Vector2(1, -0.25)
-shape = SubResource("RectangleShape2D_u2i3j")
+[node name="spider" parent="." instance=ExtResource("24_3fedq")]
+position = Vector2(-442, -124)
+script = ExtResource("25_0u167")
 
 [connection signal="pressed" from="back_Button" to="." method="_on_back_fran_button_pressed"]
 [connection signal="pressed" from="jack_sticker_Button" to="." method="_on_jack_sticker_button_pressed"]
@@ -247,4 +168,3 @@ shape = SubResource("RectangleShape2D_u2i3j")
 [connection signal="pressed" from="cat_sticker_Button" to="." method="_on_cat_sticker_button_pressed"]
 [connection signal="pressed" from="spider_sticker_Button" to="." method="_on_spider_sticker_button_pressed"]
 [connection signal="pressed" from="cauldron_Button" to="." method="_on_cauldron_button_pressed"]
-[connection signal="input_event" from="Area2D_spider" to="." method="_on_area_2d_spider_input_event"]
