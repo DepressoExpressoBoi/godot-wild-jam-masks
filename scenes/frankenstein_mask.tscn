@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dsa71x24wtm8o"]
+[gd_scene load_steps=36 format=3 uid="uid://dsa71x24wtm8o"]
 
 [ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="1_816bp"]
 [ext_resource type="Script" uid="uid://53363v6q4co5" path="res://scenes/frankenstein_mask.gd" id="1_da6do"]
@@ -30,6 +30,9 @@ texture = ExtResource("1_816bp")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0u167"]
 texture = ExtResource("2_da6do")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_da6do"]
+size = Vector2(504, 484)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_da6do"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 20
@@ -59,29 +62,59 @@ shadow_offset = Vector2(0, 3.5)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w75v7"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3fedq"]
+size = Vector2(76.5, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0u167"]
+size = Vector2(75.5, 71.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w75v7"]
+size = Vector2(88, 80.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqv0e"]
+size = Vector2(75, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2i3j"]
+size = Vector2(76, 72.5)
+
 [node name="frankenstein_mask" type="Node2D"]
 script = ExtResource("1_da6do")
 
 [node name="table" type="Panel" parent="."]
-offset_left = -8.0
-offset_top = -9.0
-offset_right = 1165.0
-offset_bottom = 659.0
+visible = false
+offset_left = 3.0
+offset_top = -8.0
+offset_right = 1176.0
+offset_bottom = 660.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_3fedq")
 
 [node name="frankenstein" type="Panel" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 293.0
-offset_top = 29.0
-offset_right = 846.0
-offset_bottom = 580.0
+offset_left = 294.0
+offset_top = 34.0
+offset_right = 847.0
+offset_bottom = 585.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0u167")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(595.00006, 325)
+scale = Vector2(1.99, 1.9366666)
+texture = ExtResource("2_da6do")
+
+[node name="Area2D_frank" type="Area2D" parent="."]
+position = Vector2(293, 29)
+
+[node name="CollisionShape2D_frank" type="CollisionShape2D" parent="Area2D_frank"]
+position = Vector2(307, 297)
+shape = SubResource("RectangleShape2D_da6do")
+
 [node name="back_Button" type="Button" parent="."]
+visible = false
 offset_left = 27.0
 offset_top = 31.0
 offset_right = 96.0
@@ -100,6 +133,7 @@ text = "Back
 "
 
 [node name="jack_sticker_Button" type="TextureButton" parent="."]
+visible = false
 offset_left = 1046.0
 offset_top = 393.0
 offset_right = 1121.0
@@ -110,6 +144,7 @@ texture_hover = ExtResource("3_816bp")
 texture_disabled = ExtResource("4_da6do")
 
 [node name="skull_sticker_Button" type="TextureButton" parent="."]
+visible = false
 offset_left = 1044.0
 offset_top = 503.0
 offset_right = 1119.0
@@ -120,6 +155,7 @@ texture_hover = ExtResource("7_w75v7")
 texture_disabled = ExtResource("8_yqv0e")
 
 [node name="cat_sticker_Button" type="TextureButton" parent="."]
+visible = false
 offset_left = 1042.0
 offset_top = 268.0
 offset_right = 1116.0
@@ -130,6 +166,7 @@ texture_hover = ExtResource("11_ecl03")
 texture_disabled = ExtResource("12_5k1me")
 
 [node name="spider_sticker_Button" type="TextureButton" parent="."]
+visible = false
 offset_left = 1040.0
 offset_top = 97.0
 offset_right = 1115.0
@@ -140,6 +177,7 @@ texture_hover = ExtResource("15_ajr6o")
 texture_disabled = ExtResource("16_iemgo")
 
 [node name="cauldron_Button" type="TextureButton" parent="."]
+visible = false
 offset_left = 1040.0
 offset_top = 171.0
 offset_right = 1117.0
@@ -149,9 +187,64 @@ texture_pressed = ExtResource("18_l761r")
 texture_hover = ExtResource("19_ouf2d")
 texture_disabled = ExtResource("20_uwewa")
 
+[node name="spider_sprite_button" type="Sprite2D" parent="."]
+position = Vector2(80, 163)
+texture = ExtResource("15_yqv0e")
+
+[node name="Area2D_spider" type="Area2D" parent="."]
+
+[node name="CollisionShape2D_sdr" type="CollisionShape2D" parent="Area2D_spider"]
+position = Vector2(79.75, 157.5)
+shape = SubResource("RectangleShape2D_3fedq")
+
+[node name="skull_sprite_button" type="Sprite2D" parent="."]
+position = Vector2(77, 249)
+texture = ExtResource("7_0u167")
+
+[node name="Area2D_skull" type="Area2D" parent="."]
+position = Vector2(77, 249)
+
+[node name="CollisionShape2D_skull" type="CollisionShape2D" parent="Area2D_skull"]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_0u167")
+
+[node name="jack_o_lantern_spirite" type="Sprite2D" parent="."]
+position = Vector2(79, 350)
+texture = ExtResource("3_3fedq")
+
+[node name="Area2d_jack" type="Area2D" parent="."]
+position = Vector2(79, 350)
+
+[node name="CollisionShape2D_jack" type="CollisionShape2D" parent="Area2d_jack"]
+position = Vector2(-2, 2.75)
+shape = SubResource("RectangleShape2D_w75v7")
+
+[node name="cat_sprite_button" type="Sprite2D" parent="."]
+position = Vector2(76, 461)
+texture = ExtResource("11_w75v7")
+
+[node name="Area2d_cat" type="Area2D" parent="."]
+position = Vector2(76, 461)
+
+[node name="CollisionShape2D_cat" type="CollisionShape2D" parent="Area2d_cat"]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_yqv0e")
+
+[node name="caldron_sprite_button" type="Sprite2D" parent="."]
+position = Vector2(73, 574)
+texture = ExtResource("19_u2i3j")
+
+[node name="Area2D_caldron" type="Area2D" parent="."]
+position = Vector2(73, 574)
+
+[node name="CollisionShape2D_cdrn" type="CollisionShape2D" parent="Area2D_caldron"]
+position = Vector2(1, -0.25)
+shape = SubResource("RectangleShape2D_u2i3j")
+
 [connection signal="pressed" from="back_Button" to="." method="_on_back_fran_button_pressed"]
 [connection signal="pressed" from="jack_sticker_Button" to="." method="_on_jack_sticker_button_pressed"]
 [connection signal="pressed" from="skull_sticker_Button" to="." method="_on_skull_sticker_button_pressed"]
 [connection signal="pressed" from="cat_sticker_Button" to="." method="_on_cat_sticker_button_pressed"]
 [connection signal="pressed" from="spider_sticker_Button" to="." method="_on_spider_sticker_button_pressed"]
 [connection signal="pressed" from="cauldron_Button" to="." method="_on_cauldron_button_pressed"]
+[connection signal="input_event" from="Area2D_spider" to="." method="_on_area_2d_spider_input_event"]
