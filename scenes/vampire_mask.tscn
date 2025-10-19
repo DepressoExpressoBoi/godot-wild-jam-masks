@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cc088gvpycubr"]
+[gd_scene load_steps=30 format=3 uid="uid://cc088gvpycubr"]
 
 [ext_resource type="Script" uid="uid://dwu38dnjwdsp6" path="res://scenes/vampire_mask.gd" id="1_1s0x6"]
 [ext_resource type="Texture2D" uid="uid://cwt1n1yky6s4p" path="res://assets/table_top_light.jpg" id="1_kicrw"]
@@ -30,6 +30,35 @@ texture = ExtResource("1_kicrw")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1s0x6"]
 texture = ExtResource("2_kicrw")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1s0x6"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k7vlo"]
+bg_color = Color(0.51718444, 0.5171845, 0.51718444, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ohvg"]
+bg_color = Color(0.74978, 0.74978, 0.74977994, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xktqf"]
+
 [node name="vampire_mask" type="Node2D"]
 script = ExtResource("1_1s0x6")
 
@@ -40,17 +69,35 @@ offset_right = 1165.0
 offset_bottom = 659.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_k7vlo")
 
-[node name="frankenstein" type="Panel" parent="."]
+[node name="vampire" type="Panel" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 293.0
-offset_top = 29.0
-offset_right = 846.0
-offset_bottom = 580.0
+offset_left = 291.0
+offset_top = 28.0
+offset_right = 844.0
+offset_bottom = 579.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_1s0x6")
+
+[node name="back_Button" type="Button" parent="vampire"]
+layout_mode = 0
+offset_left = -241.0
+offset_right = -172.0
+offset_bottom = 42.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_1s0x6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k7vlo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3ohvg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xktqf")
+text = "Back
+"
 
 [node name="jack_sticker_Button" type="TextureButton" parent="."]
 offset_left = 1045.0
@@ -101,3 +148,10 @@ texture_normal = ExtResource("19_80xy1")
 texture_pressed = ExtResource("18_fudgg")
 texture_hover = ExtResource("19_bkjlt")
 texture_disabled = ExtResource("20_4dytm")
+
+[connection signal="pressed" from="vampire/back_Button" to="." method="_on_back_vampire_button_pressed"]
+[connection signal="pressed" from="jack_sticker_Button" to="." method="_on_jack_sticker_button_pressed"]
+[connection signal="pressed" from="skull_sticker_Button" to="." method="_on_skull_sticker_button_pressed"]
+[connection signal="pressed" from="cat_sticker_Button" to="." method="_on_cat_sticker_button_pressed"]
+[connection signal="pressed" from="spider_sticker_Button" to="." method="_on_spider_sticker_button_pressed"]
+[connection signal="pressed" from="cauldron_Button" to="." method="_on_cauldron_button_pressed"]
