@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ppcmqjbug43q"]
+[gd_scene load_steps=19 format=3 uid="uid://ppcmqjbug43q"]
 
 [ext_resource type="Texture2D" uid="uid://dposj3jx41rg" path="res://assets/franenkstein_sticker_final.png" id="1_fkjdv"]
 [ext_resource type="Texture2D" uid="uid://ctfukfall2x00" path="res://scenes/blank_menu_bkgrnd.png" id="1_qu74m"]
@@ -17,6 +17,35 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gpvn3"]
 texture = ExtResource("1_qu74m")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qu74m"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gpvn3"]
+bg_color = Color(0.51718444, 0.5171845, 0.51718444, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2xb4"]
+bg_color = Color(0.74978, 0.74978, 0.74977994, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3d2jb"]
+
 [node name="mask_demo_test" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
@@ -30,6 +59,25 @@ offset_bottom = 659.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_gpvn3")
+
+[node name="frank_Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 496.0
+offset_right = 303.0
+offset_bottom = 538.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qu74m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gpvn3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w2xb4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3d2jb")
+text = "frankenstein
+"
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
