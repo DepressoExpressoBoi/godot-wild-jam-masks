@@ -1,0 +1,145 @@
+[gd_scene load_steps=17 format=3 uid="uid://8x05u8pfs2ax"]
+
+[ext_resource type="PackedScene" uid="uid://lulwk5mtevqn" path="res://scenes/RPSScenes/Doors.tscn" id="1_3fxu7"]
+[ext_resource type="Texture2D" uid="uid://lkpu4ukady7n" path="res://assets/RPSSprites/FruitRollUp/FruitRollUp.png" id="2_jqhtl"]
+[ext_resource type="Texture2D" uid="uid://c1awqk4tfjbs0" path="res://assets/RPSSprites/FruitRollUp/selected.png" id="3_0mspb"]
+[ext_resource type="Texture2D" uid="uid://cmv6y11cmw2ib" path="res://assets/RPSSprites/FruitRollUp/hovered.png" id="4_jnumi"]
+[ext_resource type="Texture2D" uid="uid://c4ogl27rj7ylx" path="res://assets/RPSSprites/FruitRollUp/disabled.png" id="5_7cw88"]
+[ext_resource type="Texture2D" uid="uid://c5su5k145lad0" path="res://assets/RPSSprites/JawBreaker/JawBreaker.png" id="6_textl"]
+[ext_resource type="Texture2D" uid="uid://qomuy8o6ba75" path="res://assets/RPSSprites/JawBreaker/selected.png" id="7_ipu46"]
+[ext_resource type="Texture2D" uid="uid://b3hd8bu7thi70" path="res://assets/RPSSprites/JawBreaker/hovered.png" id="8_m0ndh"]
+[ext_resource type="Texture2D" uid="uid://wsjnii3l3b04" path="res://assets/RPSSprites/JawBreaker/disabled.png" id="9_3fxu7"]
+[ext_resource type="Texture2D" uid="uid://c464ale6g7ie0" path="res://assets/RPSSprites/Scissors/Scissors.png" id="10_5x85t"]
+[ext_resource type="Texture2D" uid="uid://bwib2qnenoxgx" path="res://assets/RPSSprites/Scissors/selected.png" id="11_rqdq0"]
+[ext_resource type="Texture2D" uid="uid://byvkfibdrrdsa" path="res://assets/RPSSprites/Scissors/hovered.png" id="12_04o1h"]
+[ext_resource type="Texture2D" uid="uid://b88v1gjc485ct" path="res://assets/RPSSprites/Scissors/disabled.png" id="13_4byi1"]
+[ext_resource type="Script" uid="uid://n0vj2kvdwkl5" path="res://scripts/RPSCode/fruit_roll_up_count.gd" id="14_ipu46"]
+[ext_resource type="Script" uid="uid://csqnqvmwdmc2t" path="res://scripts/RPSCode/jaw_breaker_count.gd" id="15_m0ndh"]
+[ext_resource type="Script" uid="uid://bg1u2pxy0h2wd" path="res://scripts/RPSCode/scissors_count.gd" id="16_3fxu7"]
+
+[node name="Node" type="Node"]
+
+[node name="Doors" parent="." instance=ExtResource("1_3fxu7")]
+
+[node name="JawBreakerCount" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 580.0
+offset_right = 360.0
+offset_bottom = 603.0
+scale = Vector2(2, 2)
+script = ExtResource("15_m0ndh")
+
+[node name="JawBreaker" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 239.00002
+offset_top = 435.00003
+offset_right = 879.0
+offset_bottom = 1075.0
+scale = Vector2(0.27, 0.27)
+texture_normal = ExtResource("6_textl")
+texture_pressed = ExtResource("7_ipu46")
+texture_hover = ExtResource("8_m0ndh")
+texture_disabled = ExtResource("9_3fxu7")
+
+[node name="FruitRollUpCount" type="Label" parent="."]
+offset_left = 481.0
+offset_top = 581.0
+offset_right = 527.0
+offset_bottom = 623.0
+scale = Vector2(2, 2)
+script = ExtResource("14_ipu46")
+
+[node name="FruitRollUp" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 428.0
+offset_top = 435.0
+offset_right = 1068.0
+offset_bottom = 1075.0
+scale = Vector2(0.23, 0.23)
+size_flags_vertical = 8
+texture_normal = ExtResource("2_jqhtl")
+texture_pressed = ExtResource("3_0mspb")
+texture_hover = ExtResource("4_jnumi")
+texture_disabled = ExtResource("5_7cw88")
+stretch_mode = 3
+
+[node name="ScissorsCount" type="Label" parent="."]
+offset_left = 650.0
+offset_top = 580.0
+offset_right = 690.0
+offset_bottom = 603.0
+scale = Vector2(2, 2)
+script = ExtResource("16_3fxu7")
+
+[node name="Scissors" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 589.0
+offset_top = 434.0
+offset_right = 1229.0
+offset_bottom = 1074.0
+scale = Vector2(0.23, 0.23)
+texture_normal = ExtResource("10_5x85t")
+texture_pressed = ExtResource("11_rqdq0")
+texture_hover = ExtResource("12_04o1h")
+texture_disabled = ExtResource("13_4byi1")
+
+[node name="You Won!" type="Label" parent="."]
+visible = false
+top_level = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -54.0
+offset_right = -72.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "You Won!"
+uppercase = true
+
+[node name="You Lost!" type="Label" parent="."]
+visible = false
+top_level = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -54.0
+offset_right = -75.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "You Lost!"
+uppercase = true
+
+[node name="Try Again" type="Label" parent="."]
+visible = false
+top_level = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -54.0
+offset_right = -69.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Try Again "
+uppercase = true
+
+[connection signal="pressed" from="JawBreaker" to="JawBreakerCount" method="_on_jaw_breaker_pressed"]
+[connection signal="pressed" from="FruitRollUp" to="FruitRollUpCount" method="_on_fruit_roll_up_pressed"]
+[connection signal="pressed" from="Scissors" to="ScissorsCount" method="_on_scissors_pressed"]

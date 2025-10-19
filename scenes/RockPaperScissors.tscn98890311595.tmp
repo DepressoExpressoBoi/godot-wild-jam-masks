@@ -1,0 +1,113 @@
+[gd_scene load_steps=18 format=3 uid="uid://8x05u8pfs2ax"]
+
+[ext_resource type="Texture2D" uid="uid://bk3aw1ljkqk1f" path="res://assets/BackgroundImages/door.jpg" id="1_pxa8e"]
+[ext_resource type="Texture2D" uid="uid://lkpu4ukady7n" path="res://assets/RPSSprites/FruitRollUp/FruitRollUp.png" id="2_jqhtl"]
+[ext_resource type="Texture2D" uid="uid://c1awqk4tfjbs0" path="res://assets/RPSSprites/FruitRollUp/selected.png" id="3_0mspb"]
+[ext_resource type="Texture2D" uid="uid://cmv6y11cmw2ib" path="res://assets/RPSSprites/FruitRollUp/hovered.png" id="4_jnumi"]
+[ext_resource type="Texture2D" uid="uid://c4ogl27rj7ylx" path="res://assets/RPSSprites/FruitRollUp/disabled.png" id="5_7cw88"]
+[ext_resource type="Texture2D" uid="uid://c5su5k145lad0" path="res://assets/RPSSprites/JawBreaker/JawBreaker.png" id="6_textl"]
+[ext_resource type="Texture2D" uid="uid://qomuy8o6ba75" path="res://assets/RPSSprites/JawBreaker/selected.png" id="7_ipu46"]
+[ext_resource type="Texture2D" uid="uid://b3hd8bu7thi70" path="res://assets/RPSSprites/JawBreaker/hovered.png" id="8_m0ndh"]
+[ext_resource type="Texture2D" uid="uid://wsjnii3l3b04" path="res://assets/RPSSprites/JawBreaker/disabled.png" id="9_3fxu7"]
+[ext_resource type="Texture2D" uid="uid://c464ale6g7ie0" path="res://assets/RPSSprites/Scissors/Scissors.png" id="10_5x85t"]
+[ext_resource type="Texture2D" uid="uid://bwib2qnenoxgx" path="res://assets/RPSSprites/Scissors/selected.png" id="11_rqdq0"]
+[ext_resource type="Texture2D" uid="uid://byvkfibdrrdsa" path="res://assets/RPSSprites/Scissors/hovered.png" id="12_04o1h"]
+[ext_resource type="Texture2D" uid="uid://b88v1gjc485ct" path="res://assets/RPSSprites/Scissors/disabled.png" id="13_4byi1"]
+
+[sub_resource type="FontVariation" id="FontVariation_m0ndh"]
+
+[sub_resource type="FontVariation" id="FontVariation_3fxu7"]
+base_font = SubResource("FontVariation_m0ndh")
+
+[sub_resource type="GDScript" id="GDScript_textl"]
+script/source = "extends Label
+
+func _process(delta):
+	self.text = str(CandyCounter.count)
+
+func _on_jaw_breaker_pressed() -> void:
+	CandyCounter.count -= 1;
+"
+
+[sub_resource type="GDScript" id="GDScript_ipu46"]
+script/source = "extends Label
+
+func _process(delta):
+	self.text = str(CandyCounter.count)
+
+func _on_fruit_roll_up_pressed() -> void:
+	
+	
+	CandyCounter.count -= 1;
+"
+
+[node name="Node" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pxa8e")
+
+[node name="FruitRollUp" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 513.0
+offset_top = 464.99997
+offset_right = 1153.0
+offset_bottom = 1105.0
+scale = Vector2(0.2, 0.2)
+size_flags_vertical = 8
+texture_normal = ExtResource("2_jqhtl")
+texture_pressed = ExtResource("3_0mspb")
+texture_hover = ExtResource("4_jnumi")
+texture_disabled = ExtResource("5_7cw88")
+stretch_mode = 3
+
+[node name="JawBreaker" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 355.0
+offset_top = 474.99997
+offset_right = 995.0
+offset_bottom = 1115.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("6_textl")
+texture_pressed = ExtResource("7_ipu46")
+texture_hover = ExtResource("8_m0ndh")
+texture_disabled = ExtResource("9_3fxu7")
+
+[node name="Scissors" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 659.0
+offset_top = 465.99997
+offset_right = 1299.0
+offset_bottom = 1106.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("10_5x85t")
+texture_pressed = ExtResource("11_rqdq0")
+texture_hover = ExtResource("12_04o1h")
+texture_disabled = ExtResource("13_4byi1")
+
+[node name="FruitRollUpCount" type="Label" parent="."]
+offset_left = 538.0
+offset_top = 593.0
+offset_right = 617.0
+offset_bottom = 631.0
+theme_override_fonts/font = SubResource("FontVariation_3fxu7")
+script = SubResource("GDScript_textl")
+
+[node name="JawBreakerCount" type="Label" parent="."]
+offset_left = 403.0
+offset_top = 596.0
+offset_right = 443.0
+offset_bottom = 619.0
+script = SubResource("GDScript_ipu46")
+
+[node name="ScissorsCount" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="FruitRollUp" to="FruitRollUpCount" method="_on_fruit_roll_up_pressed"]
+[connection signal="pressed" from="JawBreaker" to="FruitRollUpCount" method="_on_jaw_breaker_pressed"]

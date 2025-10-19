@@ -12,7 +12,21 @@ config_version=5
 
 config/name="godot wild jam masks"
 run/main_scene="res://scenes/masks_background/main_menu.tscn"
+run/main_scene="uid://8x05u8pfs2ax"
 config/features=PackedStringArray("4.5", "GL Compatibility")
+
+[autoload]
+
+FruitRollUpCounter="*res://scripts/RPSCode/FruitRollUpCounter.gd"
+JawBreakerCounter="*res://scripts/RPSCode/JawBreakerCounter.gd"
+ScissorsCounter="*res://scripts/RPSCode/ScissorsCounter.gd"
+PlayRps="*res://scripts/RPSCode/PlayRPS.gd"
+Doors="*res://scenes/RPSScenes/Doors.tscn"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 
