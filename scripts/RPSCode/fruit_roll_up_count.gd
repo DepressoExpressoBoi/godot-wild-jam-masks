@@ -6,6 +6,7 @@ var lost_label
 var tie_label
 
 #@onready var trick_or_treating = preload("res://scenes/trick_or_treating.tscn").instance()
+#@export var tot:PackedScene
 
 func _ready():
 	doors_node = get_node("../Doors")
