@@ -105,7 +105,7 @@ text = "Next
 "
 
 [node name="spider_drag" parent="." instance=ExtResource("4_u72lo")]
-position = Vector2(543, -74)
+position = Vector2(539, -58)
 
 [node name="skull_drag" parent="." instance=ExtResource("5_jc3hm")]
 position = Vector2(596, 255)
@@ -114,7 +114,7 @@ position = Vector2(596, 255)
 position = Vector2(577, 183)
 
 [node name="cat_drag" parent="." instance=ExtResource("7_xgas0")]
-position = Vector2(599, -155)
+position = Vector2(599, -122)
 
 [node name="caldron_drag" parent="." instance=ExtResource("8_4j61j")]
 position = Vector2(537, -22)
