@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://clnr4uq4ybec7"]
+
+[ext_resource type="Script" uid="uid://ceoak3pm3rn5e" path="res://scripts/GameController.gd" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://ck1oid0dic3mf" path="res://scenes/trick_or_treating.tscn" id="1_yqjtg"]
+
+[node name="GameController" type="Node" node_paths=PackedStringArray("trick_or_treating")]
+script = ExtResource("1_uwrxv")
+trick_or_treating = NodePath("Trick-Or-Treating")
+
+[node name="Trick-Or-Treating" parent="." instance=ExtResource("1_yqjtg")]

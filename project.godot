@@ -22,6 +22,7 @@ JawBreakerCounter="*res://scripts/RPSCode/JawBreakerCounter.gd"
 ScissorsCounter="*res://scripts/RPSCode/ScissorsCounter.gd"
 PlayRps="*res://scripts/RPSCode/PlayRPS.gd"
 Doors="*res://scenes/RPSScenes/Doors.tscn"
+Global="*res://scripts/global.gd"
 
 [display]
 
