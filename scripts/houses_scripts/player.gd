@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #@onready var rps = preload("res://scenes/RPSScenes/RockPaperScissors.tscn").instance()
-var rps = preload("res://scenes/RPSScenes/RockPaperScissors.tscn").instantiate()
+#var rps = preload("res://scenes/RPSScenes/RockPaperScissors.tscn").instantiate()
 
 const speed = 300
 
@@ -26,4 +26,7 @@ func die():
 
 func _on_area_2d_body_entered(body: Node2D):
 	if body.is_in_group("houses"):
-		get_tree().change_scene_to_file("res://scenes/RPSScenes/RockPaperScissors.tscn")
+		print("entered house")
+		Global.game_controller.change_to_rps()
+		print("ran command")
+		#get_tree().change_scene_to_file("res://scenes/RPSScenes/RockPaperScissors.tscn")
